@@ -1,0 +1,17 @@
+
+.cke_dialog {
+	box-shadow: 2px 2px 12px #000 !important;
+}
+
+/*.cke_dialog_background_cover {
+	background-color: black !important; 
+	opacity: 0.5 !important;
+}*/
+
+.cke_dialog_footer .cke_resizer {
+	display: none !important;
+}
+
+#cke_1_bottom .cke_resizer {
+	visibility: hidden !important;
+}
