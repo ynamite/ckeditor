@@ -3,7 +3,7 @@
 <script type="text/javascript">
 jQuery(document).ready( function($) {
 	$('#REX_FORM').submit(function() {
-		// strip empty paragraphs out if there are any, could also be done via php in output module
+		// strip empty paragraphs out if there are any, can also be done via php in output module
 		var data = CKEDITOR.instances.ckeditor.getData();
 	
 		if (data.match(/<p>\s*<\/p>\s\s+/g)) {			
