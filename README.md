@@ -3,8 +3,6 @@ CKEditor AddOn für REDAXO 4
 
 Der CKEditor für REDAXO inkl. eines Beispielmoduls.
 
-Hinweis: Es fehlt noch die und Anbindung and die Linkmap und den Medienpool von REDAXO.
-
 Features
 --------
 
