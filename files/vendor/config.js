@@ -43,7 +43,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// Remove some buttons, provided by the standard plugins, which we don't
 	// need to have in the Standard(s) toolbar.
 	//config.removeButtons = 'Underline,Subscript,Superscript';
-	config.removeButtons = 'Image,Underline,Subscript,Superscript,SpecialChar,HorizontalRule,Maximize,Styles,Blockquote,Source,Strike,RemoveFormat,Cut,Copy,Paste,PasteFromWord';
+	config.removeButtons = 'Image,Underline,Subscript,Superscript,SpecialChar,HorizontalRule,Maximize,Styles,Blockquote,Source,Strike,RemoveFormat,Cut,Copy,Paste'; // PasteFromWord
 
 	// Se the most common block elements.
 	//config.format_tags = 'p;h1;h2;h3;pre';
