@@ -363,6 +363,7 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 						{
 						id: 'protocol',
 						type: 'select',
+						className: 'rex-protocol',
 						label: commonLang.protocol,
 						'default': 'http://',
 						items: [
@@ -387,6 +388,7 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 						id: 'url',
 						label: commonLang.url,
 						required: true,
+						className: 'rex-url',
 						onLoad: function() {
 							this.allowOnChange = true;
 						},
@@ -1260,13 +1262,13 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 /* ------------------ REDAXO -------------------------- */
 
 function insertLink(link, name) {
-	jQuery('#cke_53_textInput').val(link);
-	jQuery('#cke_50_select option:last').attr("selected","selected");
+	jQuery('.rex-url input').val(link);
+	jQuery('.rex-protocol option:last').attr("selected","selected");
 }
 
 function insertFileLink(link) {
-	jQuery('#cke_53_textInput').val("/" + link);
-	jQuery('#cke_50_select option:last').attr("selected","selected");
+	jQuery('.rex-url input').val("/" + link);
+	jQuery('.rex-protocol option:last').attr("selected","selected");
 }
 
 function getParam(variable){ 
