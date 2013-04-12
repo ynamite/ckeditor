@@ -1,6 +1,8 @@
 <?php
 // module: ckeditor_default_in
-?>
+
+if (OOAddon::isAvailable("ckeditor")) {
+?> 
 
 <textarea name="VALUE[1]" id="ckeditor" class="ckeditor" style="display: none;">REX_VALUE[1]</textarea>
 
@@ -19,3 +21,9 @@ jQuery(document).ready( function($) {
 	});
 });	
 </script>
+
+<?php 
+} else { 
+	echo rex_warning('Dieses Modul ben&ouml;tigt das CKEditor Addon!'); 
+}
+?>
