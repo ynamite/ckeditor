@@ -1,4 +1,8 @@
 ckeditor_addon_help = CKEditor für REDAXO
-ckeditor_settings = Einstellungen
-ckeditor_setup = Setup
-ckeditor_help = Hilfe
+ckeditor_install_module = Modul installieren
+ckeditor_requirement = Dieses Modul wird benötigt damit der CKEditor im Backend einsatzbereit ist:
+ckeditor_module_update = Bestehendes Modul aktualisieren
+ckeditor_module_install = Modul jetzt automatisch installieren
+ckeditor_module_input = Eingabe
+ckeditor_module_output = Ausgabe
+ckeditor_module_added = Modul "{0}" wurde angelegt

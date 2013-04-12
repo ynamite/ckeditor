@@ -53,38 +53,38 @@ if (isset($_REQUEST["install"]) && $_REQUEST["install"] == 1) {
     $mi->insert();
     $module_id = (int) $mi->getLastId();
 	
-    echo rex_info('Modul "' . $ckeditor_module_name . '" wurde angelegt');
+    echo rex_info($I18N->msg('ckeditor_module_added', $ckeditor_module_name));
   }
 }
 ?>
 
 <div class="rex-addon-output">
-	<h2 class="rex-hl2">CKEditor für REDAXO</h2>
+	<h2 class="rex-hl2"><?php echo $I18N->msg('ckeditor_addon_help'); ?></h2>
 	<div class="rex-area-content">
 		<p class="logo"><a href="http://ckeditor.com"><img src="../files/addons/ckeditor/ckeditor.png" /></a><br /><a class="extern" href="http://ckeditor.com">ckeditor.com</a></p>
 	</div>
 </div>
 
 <div class="rex-addon-output">
-	<h2 class="rex-hl2">Modul installieren</h2>
+	<h2 class="rex-hl2"><?php echo $I18N->msg('ckeditor_install_module'); ?></h2>
 	<div class="rex-area-content">
-		<p>Dieses Modul wird ben&ouml;tigt damit der CKEditor im Backend einsatzbereit ist. </p>
+		<p><?php echo $I18N->msg('ckeditor_requirement'); ?></p>
 		<ul>
 		<?php
 			if ($module_id > 0) {
 				if (!isset($_REQUEST["install"])) {
-					echo '<li><a href="index.php?page=ckeditor&amp;subpage=setup&amp;install=1&amp;module_id=' . $module_id . '">Bestehendes Modul aktualisieren</a></li>';
+					echo '<li><a href="index.php?page=ckeditor&amp;subpage=setup&amp;install=1&amp;module_id=' . $module_id . '">' . $I18N->msg('ckeditor_module_update') . '</a></li>';
 				}
     		} else {
 				if (!isset($_REQUEST["install"])) {
-					echo '<li><a href="index.php?page=ckeditor&amp;subpage=setup&amp;install=1">Modul jetzt automatisch installieren</a></li>';
+					echo '<li><a href="index.php?page=ckeditor&amp;subpage=setup&amp;install=1">' . $I18N->msg('ckeditor_module_install') . '</a></li>';
 				}
 			}
 		?>		
 		</ul>
-		<p class="headline">Eingabe<br /><?php rex_highlight_string($moduleInput); ?></p>
+		<p class="headline"><?php echo $I18N->msg('ckeditor_module_input'); ?><br /><?php rex_highlight_string($moduleInput); ?></p>
 		<p>&nbsp;</p>
-		<p class="headline">Ausgabe<br /><?php rex_highlight_string($moduleOutput); ?></p>
+		<p class="headline"><?php echo $I18N->msg('ckeditor_module_output'); ?><br /><?php rex_highlight_string($moduleOutput); ?></p>
 	</div>
 </div>
 
