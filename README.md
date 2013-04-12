@@ -6,7 +6,8 @@ Der CKEditor für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.1
+* CKEditor 4.1 Standard
+* Unterstützung für Links über Linkmap und Medienpool
 * REDAXO-Modul
 
 Hinweise
