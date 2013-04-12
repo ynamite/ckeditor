@@ -1,15 +1,16 @@
 <?php
 class rex_ckeditor_utils {
-	public static function appendToPageHeader($params) {
+	public static function addToOutputFilter($params) {
 		global $REX;
 
-		$insert = '<!-- BEGIN ckeditor -->' . PHP_EOL;
+		$insert = PHP_EOL;
+		$insert .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
 		$insert .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/rex_custom.css" />' . PHP_EOL;
 		//$insert .= '<script type="text/javascript">var CKEDITOR_BASEPATH = "../' . self::getMediaAddonDir() . '/ckeditor/vendor/";</script>' . PHP_EOL;
 		$insert .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
 		$insert .= '<!-- END ckeditor -->';
-	
-		return $params['subject'] . PHP_EOL . $insert;
+
+		return str_replace('</body>', $insert . '</body>', $params['subject']);
 	}
 
 	protected static function getMediaAddonDir() {
