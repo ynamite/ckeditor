@@ -2,6 +2,10 @@
 // module: ckeditor_default_in
 
 if (OOAddon::isAvailable("ckeditor")) {
+	if ($REX['ADDON']['ckeditor']['settings']['lazy_load']) {
+		// lazy load ckeditor files
+		echo rex_ckeditor_utils::getHtml();
+	}
 ?> 
 
 <textarea name="VALUE[1]" id="ckeditor" class="ckeditor" style="display: none;">REX_VALUE[1]</textarea>

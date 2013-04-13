@@ -1,16 +1,19 @@
 <?php
 class rex_ckeditor_utils {
 	public static function addToOutputFilter($params) {
-		global $REX;
+		return str_replace('</body>', self::getHtml() . '</body>', $params['subject']);
+	}
 
-		$insert = PHP_EOL;
-		$insert .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
-		$insert .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/rex_custom.css" />' . PHP_EOL;
+	public static function getHtml() {
+		$html = PHP_EOL;
+
+		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
+		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/rex_custom.css" />' . PHP_EOL;
 		//$insert .= '<script type="text/javascript">var CKEDITOR_BASEPATH = "../' . self::getMediaAddonDir() . '/ckeditor/vendor/";</script>' . PHP_EOL;
-		$insert .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
-		$insert .= '<!-- END ckeditor -->';
+		$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
+		$html .= '<!-- END ckeditor -->';
 
-		return str_replace('</body>', $insert . '</body>', $params['subject']);
+		return $html;
 	}
 
 	protected static function getMediaAddonDir() {

@@ -18,7 +18,9 @@ if ($REX['REDAXO']) {
 	// add lang file
 	$I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/ckeditor/lang/');
 
-	// add css/js to page header
-	rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
+	if (!$REX['ADDON']['ckeditor']['settings']['lazy_load']) {
+		// add css/js to page header
+		rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
+	}
 }
 ?>
