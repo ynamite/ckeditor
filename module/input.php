@@ -16,8 +16,10 @@ jQuery(document).ready( function($) {
 		// strip empty paragraphs out if there are any, can also be done via php in output module
 		var data = CKEDITOR.instances.ckeditor.getData();
 	
-		if (data.match(/<p>\s*<\/p>\s\s+/g)) {			
+		if (data.match(/<p>\s*<\/p>\s\s+/g) || data.indexOf("<p></p>") != -1 || data.indexOf("<p>&nbsp;</p>") != -1) {
 			data = data.replace(/<p>\s*<\/p>\s\s+/g, '');
+			data = data.replace("<p></p>", "");
+			data = data.replace("<p>&nbsp;</p>", "");
 			CKEDITOR.instances.ckeditor.setData(data);
 		}
 

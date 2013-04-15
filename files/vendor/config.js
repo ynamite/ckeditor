@@ -52,8 +52,12 @@ CKEDITOR.editorConfig = function( config ) {
 	// Make dialogs simpler.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 
+	// ------------------------------------- //
+	//config.allowedContent = ''; // here you can add html elements that are allowed only
 	config.fillEmptyBlocks = false;
 	config.height = 400;
 	config.removePlugins = 'elementspath';
 	config.entities = false;
+	config.extraPlugins = "showborders";
+	// ------------------------------------- //
 };
