@@ -61,7 +61,7 @@ if (isset($_REQUEST["install"]) && $_REQUEST["install"] == 1) {
 <div class="rex-addon-output">
 	<h2 class="rex-hl2"><?php echo $I18N->msg('ckeditor_addon_help'); ?></h2>
 	<div class="rex-area-content">
-		<p class="logo"><a href="http://ckeditor.com"><img src="../files/addons/ckeditor/ckeditor.png" /></a><br /><a class="extern" href="http://ckeditor.com">ckeditor.com</a></p>
+		<p class="logo"><a href="http://ckeditor.com" target="_blank"><img src="../files/addons/ckeditor/ckeditor.png" /></a><br /><a class="extern" target="_blank" href="http://ckeditor.com">ckeditor.com</a></p>
 	</div>
 </div>
 
