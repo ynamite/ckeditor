@@ -7,7 +7,9 @@ Features
 --------
 
 * CKEditor 4.1 Standard
-* Unterstützung für Links über Linkmap und Medienpool
+* Grundkonfiguration wurde auf das Nötigste reduziert
+* Verbesserter Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
+* Vereinfachter Tabellendialog
 * REDAXO-Modul
 
 Hinweise
@@ -15,6 +17,7 @@ Hinweise
 
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
+* Einstellungen für den CKEditor in: `/files/addons/ckeditor/vendor/config.js`
 
 Changelog
 ---------
