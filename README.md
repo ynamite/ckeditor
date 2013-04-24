@@ -27,7 +27,8 @@ siehe [CHANGELOG.md](CHANGELOG.md)
 Lizenz
 ------
 
-siehe [LICENSE.md](LICENSE.md)
+* CKEditor: [LICENSE.md](files/vendor/LICENSE.md)
+* CKEditor REDAXO AddOn: [LICENSE.md](LICENSE.md)
 
 Credits
 -------
