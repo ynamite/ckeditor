@@ -91,7 +91,7 @@ if (isset($_REQUEST["install"]) && $_REQUEST["install"] == 1) {
 <style type="text/css">
 #rex-page-ckeditor p.logo {
 	text-align: center;
-	margin: 10px 0;
+	margin: 25px 0;
 }
 #rex-page-ckeditor p.logo img {
 	margin-bottom: 5px;

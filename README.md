@@ -17,7 +17,7 @@ Hinweise
 
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
-* Einstellungen für den CKEditor in: `/files/addons/ckeditor/vendor/config.js`
+* Einstellungen für den CKEditor in: `/files/addons/ckeditor/vendor/config.js` (befindet sich also im `'files/addons/` Ordner von REDAXO nicht vom AddOn selbst)
 
 Changelog
 ---------
