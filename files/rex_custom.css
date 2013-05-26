@@ -15,3 +15,10 @@
 #cke_1_bottom .cke_resizer {
 	visibility: hidden !important;
 }
+
+/* -------------------------------------------------- */
+
+div.rex-form div.rex-form-row p .cke, /* metainfos */
+.xform p .cke { /* xform */
+    display: inline-block !important;
+}
