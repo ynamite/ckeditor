@@ -341,6 +341,7 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 				'default': 'url',
 				items: [
 					[ linkLang.toUrl, 'url' ],
+					[ linkLang.toEmail, 'email' ],
 					[ linkLang.toAnchor, 'anchor' ]
 					],
 				onChange: linkTypeChanged,
@@ -612,38 +613,6 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 							data.email = {};
 
 						data.email.address = this.getValue();
-					}
-				},
-					{
-					type: 'text',
-					id: 'emailSubject',
-					label: linkLang.emailSubject,
-					setup: function( data ) {
-						if ( data.email )
-							this.setValue( data.email.subject );
-					},
-					commit: function( data ) {
-						if ( !data.email )
-							data.email = {};
-
-						data.email.subject = this.getValue();
-					}
-				},
-					{
-					type: 'textarea',
-					id: 'emailBody',
-					label: linkLang.emailBody,
-					rows: 3,
-					'default': '',
-					setup: function( data ) {
-						if ( data.email )
-							this.setValue( data.email.body );
-					},
-					commit: function( data ) {
-						if ( !data.email )
-							data.email = {};
-
-						data.email.body = this.getValue();
 					}
 				}
 				],
