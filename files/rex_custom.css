@@ -12,7 +12,7 @@
 	display: none !important;
 }
 
-#cke_1_bottom .cke_resizer {
+.cke_bottom .cke_resizer {
 	visibility: hidden !important;
 }
 
