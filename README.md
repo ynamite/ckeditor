@@ -17,6 +17,8 @@ Hinweise
 
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
+* Per CSS-Klasse `ckeditor` kann man den CKEditor auch in den MetaInfos oder im XForm TableManager verwenden.
+* Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) (ab v1.2.6!) empfohlen um die Email-Adressen vor Spambots zu schützen.
 * Einstellungen für den CKEditor in: `/files/addons/ckeditor/vendor/config.js` (befindet sich also im `'files/addons/` Ordner von REDAXO nicht vom AddOn selbst)
 
 Changelog
