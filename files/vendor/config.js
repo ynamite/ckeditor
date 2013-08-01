@@ -59,5 +59,6 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removePlugins = 'elementspath';
 	config.entities = false;
 	config.extraPlugins = "showborders";
+	config.linkShowTargetTab = false;
 	// ------------------------------------- //
 };

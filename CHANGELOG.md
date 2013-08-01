@@ -1,6 +1,10 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 1.0.4
+
+* Der Target-Tab wurde im Link-Dialog standardmäßig ausgeschaltet. Über die Option `linkShowTargetTab` in der `config.js` wieder einzuschalten.
+
 ### Version 1.0.3 - 27. Mai 2013
 
 * Per CSS-Klasse `ckeditor` kann man den CKEditor auch in den MetaInfos oder im XForm TableManager verwenden.
