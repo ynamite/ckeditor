@@ -3,6 +3,7 @@ CKEditor AddOn - Changelog
 
 ### Version 1.0.4
 
+* `pastefromword` Plugin aktualisiert
 * Der Target-Tab wurde im Link-Dialog standardmäßig ausgeschaltet. Über die Option `linkShowTargetTab` in der `config.js` wieder einzuschalten.
 
 ### Version 1.0.3 - 27. Mai 2013
