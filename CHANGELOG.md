@@ -1,8 +1,9 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 1.0.4
+### Version 1.0.4 - 09. September 2013
 
+* Plugin `help` hinzugefügt. Durch Klick auf den entsprechenden Button wird eine Kurzhilfe für Redakteure angezeigt.
 * `pastefromword` Plugin aktualisiert
 * Der Target-Tab wurde im Link-Dialog standardmäßig ausgeschaltet. Über die Option `linkShowTargetTab` in der `config.js` wieder einzuschalten.
 

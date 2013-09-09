@@ -37,7 +37,8 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'tools' },
 		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
 		{ name: 'others' },
-		{ name: 'clipboard',   groups: [ 'clipboard' ] } // undo
+		{ name: 'clipboard',   groups: [ 'clipboard' ] }, // undo
+		{ name: 'help' }
 	];
 
 	// Remove some buttons, provided by the standard plugins, which we don't
@@ -58,7 +59,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.height = 400;
 	config.removePlugins = 'elementspath';
 	config.entities = false;
-	config.extraPlugins = "showborders";
+	config.extraPlugins = "showborders,help";
 	config.linkShowTargetTab = false;
 	// ------------------------------------- //
 };
