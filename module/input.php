@@ -56,7 +56,7 @@ jQuery(document).ready( function($) {
 			CKEDITOR.instances.ckeditor.setData(data);
 		}
 
-		return false;
+		return true;
 	});
 });	
 </script>
