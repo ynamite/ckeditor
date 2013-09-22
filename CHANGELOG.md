@@ -1,6 +1,10 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 1.0.5 - 22. September 2013
+
+* Mögliche mehrfach vorkommende BRs werden nun herausgefiltert. Der User hat so keine Chance mehr künstliche Abstände zu erzeugen.
+
 ### Version 1.0.4 - 09. September 2013
 
 * Plugin `help` hinzugefügt. Durch Klick auf den entsprechenden Button wird eine Kurzhilfe für Redakteure angezeigt.
