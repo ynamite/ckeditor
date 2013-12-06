@@ -17,6 +17,13 @@ jQuery(document).ready( function($) {
 		var data = CKEDITOR.instances.ckeditor.getData();
 		var doDataUpdate = false;
 
+		if (data.match(/\x03/)) {
+			// replace invisible control characters (word problem) 
+			data = data.replace(/\x03/igm, '');
+	
+			doDataUpdate = true;
+		}
+
 		if (data.indexOf("&nbsp;") != -1) {
 			// replace &nbsp;
 			data = data.replace(/&nbsp;/g, "");
