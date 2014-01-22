@@ -17,8 +17,8 @@ Custom Styles hinzufügen (ausgehend vom Lite Modul)
 --------------------------------------------------
 
 * Datei `/files/addons/ckeditor/custom.css` anlegen und CSS hinzufügen z.b. `.green { color: green; }`
-* Im Modul die Styles Combobox zur Toolbar hinzufügen: `['Format', 'Styles']`
 * Im Modul die Custom CSS Datei in der CKEditor Config angeben: `contentsCss: ['/files/addons/ckeditor/custom.css', CKEDITOR.basePath + 'contents.css']`
+* Im Modul die Styles Combobox zur Toolbar hinzufügen: `['Format', 'Styles']`
 * Im Modul ein neues StyleSet für den CKEditor hinzufügen (ausserhalb von `CKEDITOR.replace` aber innerhalb von `jQuery(document).ready(function($)`):
 
 ```javascript

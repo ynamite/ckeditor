@@ -10,6 +10,7 @@ jQuery(document).ready(function($) {
 		height: 400,
 		fillEmptyBlocks: false,
 		entities: false,
+		removeButtons: '',
 		extraPlugins: 'showborders'
 		// no comma after last entry!!!
 	});
