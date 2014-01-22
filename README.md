@@ -13,12 +13,12 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
-Custom Styles hinufügen (ausgehend vom Lite Modul)
+Custom Styles hinzufügen (ausgehend vom Lite Modul)
 --------------------------------------------------
 
-* `Styles` Combobox zur Toolbar hinzufügen: `['Format', 'Styles'],`
-* Datei `/files/addons/ckeditor/custom.css` anlegen und gewünschtes CSS hinzufügen (z.b. `.green { color: green; }`) 
-* Custom CSS Datei in der CKEditor Config im Modul mit angeben: `contentsCss: ['/files/addons/ckeditor/custom.css', CKEDITOR.basePath + 'contents.css']`
+* Datei `/files/addons/ckeditor/custom.css` anlegen und gewünschtes CSS hinzufügen z.b. `.green { color: green; }`
+* Im Modul `Styles` Combobox zur Toolbar hinzufügen: `['Format', 'Styles']`
+* Im Modul Custom CSS Datei in der CKEditor Config angeben: `contentsCss: ['/files/addons/ckeditor/custom.css', CKEDITOR.basePath + 'contents.css']`
 * Im Modul ein neues StyleSet für den CKEditor hinzufügen (ausserhalb von `CKEDITOR.replace` aber innerhalb von `jQuery(document).ready(function($)`):
 
 ```javascript
