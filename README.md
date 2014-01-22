@@ -16,15 +16,15 @@ Features
 Custom Styles hinzufügen (ausgehend vom Lite Modul)
 --------------------------------------------------
 
-* Datei `/files/addons/ckeditor/custom.css` anlegen und gewünschtes CSS hinzufügen z.b. `.green { color: green; }`
-* Im Modul `Styles` Combobox zur Toolbar hinzufügen: `['Format', 'Styles']`
-* Im Modul Custom CSS Datei in der CKEditor Config angeben: `contentsCss: ['/files/addons/ckeditor/custom.css', CKEDITOR.basePath + 'contents.css']`
+* Datei `/files/addons/ckeditor/custom.css` anlegen und CSS hinzufügen z.b. `.green { color: green; }`
+* Im Modul die Styles Combobox zur Toolbar hinzufügen: `['Format', 'Styles']`
+* Im Modul die Custom CSS Datei in der CKEditor Config angeben: `contentsCss: ['/files/addons/ckeditor/custom.css', CKEDITOR.basePath + 'contents.css']`
 * Im Modul ein neues StyleSet für den CKEditor hinzufügen (ausserhalb von `CKEDITOR.replace` aber innerhalb von `jQuery(document).ready(function($)`):
 
 ```javascript
 CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Grün', element: 'span', attributes: { 'class': 'green' } },
-	{ name: 'Blau',	element: 'span', attributes: { 'class': 'blue' } }
+	{ name: 'Blau', element: 'span', attributes: { 'class': 'blue' } }
 	// no comma after last entry!!!
 ]);
 ```
@@ -70,5 +70,5 @@ Credits
 
 * [CKEditor](http://ckeditor.com/)
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
-* [webghostx](https://github.com/webghostx) für die investigative Arbeit mit der CKEdior Config ;)
+* [webghostx](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config ;)
 

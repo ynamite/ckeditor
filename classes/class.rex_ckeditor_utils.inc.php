@@ -9,7 +9,6 @@ class rex_ckeditor_utils {
 
 		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
 		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.css" />' . PHP_EOL;
-		//$insert .= '<script type="text/javascript">var CKEDITOR_BASEPATH = "../' . self::getMediaAddonDir() . '/ckeditor/vendor/";</script>' . PHP_EOL;
 		$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
 		$html .= '<!-- END ckeditor -->';
 
