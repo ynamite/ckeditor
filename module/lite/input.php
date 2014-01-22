@@ -16,21 +16,14 @@ jQuery(document).ready(function($) {
 		format_tags: 'p;h2;h3',
 		removePlugins: 'elementspath',
 		extraPlugins: 'showborders,rex_help',
-		removeButtons: 'Image,Underline,Subscript,Superscript,SpecialChar,HorizontalRule,Maximize,Styles,Blockquote,Source,Strike,RemoveFormat,Cut,Copy,Paste',
-		toolbarGroups: [
-			{ name: 'styles' },
-			{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-			{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align' ] },
-			{ name: 'editing', groups: [ 'find', 'selection' ] },
-			{ name: 'links' },
-			{ name: 'insert' },
-			{ name: 'forms' },
-			{ name: 'tools' },
-			{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-			{ name: 'others' },
-			{ name: 'clipboard', groups: [ 'clipboard' ] },
-			{ name: 'rex_help' }
-			// no comma after last entry!!!
+		toolbar: [
+			['Format'],
+			['Bold', 'Italic'],
+			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+			['Link', 'Unlink', 'Anchor'],
+			['Table'],
+			['PasteText', 'PasteFromWord'],
+			['rex_help']
 		]
 		// no comma after last entry!!!
 	});

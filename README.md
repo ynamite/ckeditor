@@ -13,6 +13,22 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
+CKEditor Toolbar Buttons
+------------------------
+
+* Source, Save, NewPage, DocProps, Preview, Print, Templates, document
+* Cut, Copy, Paste, PasteText, PasteFromWord, Undo, Redo
+* Find, Replace, SelectAll, Scayt
+* Form, Checkbox, Radio, TextField, Textarea, Select, Button, ImageButton, HiddenField
+* Bold, Italic, Underline, Strike, Subscript, Superscript, RemoveFormat
+* NumberedList, BulletedList, Outdent, Indent, Blockquote, CreateDiv, JustifyLeft, JustifyCenter, JustifyRight, JustifyBlock, BidiLtr, BidiRtl
+* Link, Unlink, Anchor
+* CreatePlaceholder, Image, Flash, Table, HorizontalRule, Smiley, SpecialChar, PageBreak, Iframe, InsertPre
+* Styles, Format, Font, FontSize
+* TextColor, BGColor
+* UIColor, Maximize, ShowBlocks
+* About
+
 Hinweise
 --------
 
