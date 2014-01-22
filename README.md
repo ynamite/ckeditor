@@ -31,12 +31,11 @@ Enfernte CKEditor Plugins
 * SpellCheckAsYouType (SCAYT)
 * WebSpellChecker
 
-Mehrere CKEditos in einem Modul
+Mehrere CKEditors in einem Modul
 -------------------------------
 
 ```html
-<textarea name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea>
-<br />
+<textarea name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
 <textarea name="VALUE[2]" style="display: none;">REX_VALUE[2]</textarea>
 
 <script type="text/javascript">
