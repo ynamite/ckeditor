@@ -8,14 +8,6 @@
 	opacity: 0.5 !important;
 }
 
-.cke_dialog_footer .cke_resizer {
-	display: none !important;
-}
-
-.cke_bottom .cke_resizer {
-	visibility: hidden !important;
-}
-
 /* -------------------------------------------------- */
 
 div.rex-form div.rex-form-row p .cke, /* metainfos */

@@ -1,7 +1,7 @@
 CKEditor AddOn für REDAXO 4
 ===========================
 
-Der CKEditor für REDAXO inkl. eines Beispielmoduls.
+Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
 
 Features
 --------
@@ -29,7 +29,7 @@ siehe [CHANGELOG.md](CHANGELOG.md)
 Lizenz
 ------
 
-* CKEditor: [LICENSE.md](files/vendor/LICENSE.md)
+* CKEditor: siehe `/ckeditor/files/vendor/LICENSE.md`
 * CKEditor REDAXO AddOn: [LICENSE.md](LICENSE.md)
 
 Credits
