@@ -16,13 +16,20 @@ Features
 Zusätzlich mitgelieferte CKEditor Plugins
 -----------------------------------------
 
-* `justify`, Toolbar-Buttons: `JustifyLeft, JustifyCenter, JustifyRight, JustifyBlock`
-* `div`, Toolbar-Buttons: `CreateDiv`
-* `image2`, ...
-* colorbutton
+* Color Button
+* Div Container Manager
+* Enhanced Image
+* Justify
+* Show Table Borders
 
 Enfernte CKEditor Plugins
 -------------------------
+
+* About CKEditor
+* Accessibility Help
+* Image
+* SpellCheckAsYouType (SCAYT)
+* WebSpellChecker
 
 
 Custom Styles hinzufügen (ausgehend vom Lite Modul)

@@ -72,7 +72,7 @@ CKEDITOR.dialog.add( 'helpDialog', function( editor ) {
 					'Nutzen Sie hierfür den entsprechenden Button in der Toolbar.</p>' +  
 
 					'<p><strong>Einfügen von gestyltem Text (aus Word oder einer Website)</strong><br />' + 
-					'Entweder über den entsprechenden Button oder direkt aus der Zwischenablage per Strg+V.</p>' +  
+					'Nutzen Sie hierfür den entsprechenden Button in der Toolbar.</p>' +  
 
 					'<p><strong>Interne REDAXO Links einfügen</strong><br />' + 
 					'Im Link-Dialog auf den Button "Interner Link" klicken.</p>' +  
