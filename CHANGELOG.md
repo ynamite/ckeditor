@@ -3,7 +3,7 @@ CKEditor AddOn - Changelog
 
 ### Version 2.0.0 DEV
 
-* AddOn Rewrite inkl Update auf CKEditor 4.3.2
+* AddOn Rewrite inkl. Update auf CKEditor 4.3.2 Standard + einige extra Plugins (siehe Readme)
 * 2 neue Beispielmodule mit integrierter Konfiguration
 * Abschnitt "CKEditor Toolbar Buttons" zur Readme hinzugefügt, thx@webghost
 * Abschnitt "Custom Styles hinzufügen (ausgehend vom Lite Modul)" zur Readme hinzugefügt, thx@webghost

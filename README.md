@@ -13,6 +13,18 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
+Zusätzlich mitgelieferte CKEditor Plugins
+-----------------------------------------
+
+* `justify`, Toolbar-Buttons: `JustifyLeft, JustifyCenter, JustifyRight, JustifyBlock`
+* `div`, Toolbar-Buttons: `CreateDiv`
+* `image2`, ...
+* colorbutton
+
+Enfernte CKEditor Plugins
+-------------------------
+
+
 Custom Styles hinzufügen (ausgehend vom Lite Modul)
 --------------------------------------------------
 
