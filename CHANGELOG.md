@@ -1,6 +1,10 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 2.0.0 DEV
+
+* AddOn Rewrite mit CKEditor 4.3.2 und 2 Beispielmodulen
+
 ### Version 1.0.5 - 22. September 2013
 
 * Mögliche mehrfach vorkommende BRs werden nun herausgefiltert. Der User hat so keine Chance mehr künstliche Abstände zu erzeugen.

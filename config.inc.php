@@ -2,7 +2,7 @@
 // init addon
 $REX['ADDON']['name']['ckeditor'] = 'CKEditor';
 $REX['ADDON']['page']['ckeditor'] = 'ckeditor';
-$REX['ADDON']['version']['ckeditor'] = '1.0.5';
+$REX['ADDON']['version']['ckeditor'] = '2.0.0 DEV';
 $REX['ADDON']['author']['ckeditor'] = "RexDude";
 $REX['ADDON']['supportpage']['ckeditor'] = 'forum.redaxo.de';
 $REX['ADDON']['perm']['ckeditor'] = 'ckeditor[]';
@@ -18,9 +18,16 @@ if ($REX['REDAXO']) {
 	// add lang file
 	$I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/ckeditor/lang/');
 
-	if (!$REX['ADDON']['ckeditor']['settings']['lazy_load']) {
-		// add css/js to page header
-		rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
-	}
+	// add subpages
+	$REX['ADDON']['ckeditor']['SUBPAGES'] = array(
+		array('', $I18N->msg('ckeditor_start')),
+		array('lite_module', $I18N->msg('ckeditor_lite_module')),
+		array('standard_module', $I18N->msg('ckeditor_standard_module')),
+		array('settings', $I18N->msg('ckeditor_settings')),
+		array('help', $I18N->msg('ckeditor_help'))
+	);
+
+	// add css/js to page header
+	rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
 }
 ?>

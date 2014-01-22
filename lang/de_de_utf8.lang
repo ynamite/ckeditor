@@ -1,8 +1,33 @@
 ckeditor_addon_help = CKEditor für REDAXO
-ckeditor_install_module = Modul installieren
-ckeditor_requirement = Dieses Modul wird benötigt damit der CKEditor im Backend einsatzbereit ist:
-ckeditor_module_update = Bestehendes Modul aktualisieren
-ckeditor_module_install = Modul jetzt automatisch installieren
+
+ckeditor_start = Start
+ckeditor_lite_module = Lite Modul
+ckeditor_standard_module = Standard Modul
+ckeditor_settings = Einstellungen
+ckeditor_help = Hilfe
+
+ckeditor_start_title = CKEditor für REDAXO
+ckeditor_start_demo = CKEditor Demo
+ckeditor_start_plugins = CKEditor Plugins
+ckeditor_start_docs = CKEditor Dokumentation
+
+ckeditor_help_chapter_readme = Readme
+ckeditor_help_chapter_changelog = Changelog
+ckeditor_help_chapter_license = Lizenz
+
+ckeditor_configfile_update = Einstellungen wurden gespeichert.
+ckeditor_configfile_nosave = Einstellungen konnten nicht gespeichert werden!
+ckeditor_configfile_nowrite = Konfigurationsdatei "{0}" ist nicht beschreibbar!
+
+ckeditor_settings_foo = Foo
+ckeditor_settings_save = Einstellungen speichern
+
 ckeditor_module_input = Eingabe
 ckeditor_module_output = Ausgabe
+
+ckeditor_module_name_lite = Texteditor (CKEditor Lite)
+ckeditor_module_name_standard = Texteditor (CKEditor Standard)
+
 ckeditor_module_added = Modul "{0}" wurde angelegt
+ckeditor_module_update = Bestehendes Modul aktualisieren
+ckeditor_module_install = Modul jetzt automatisch installieren

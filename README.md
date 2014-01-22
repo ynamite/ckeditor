@@ -6,12 +6,12 @@ Der CKEditor für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.1 Standard
-* Grundkonfiguration wurde auf das Nötigste reduziert
+* CKEditor 4.3.2 Standard
+* REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
+* CKEditor Einstellungen werden im Modul direkt vorgenommen
 * Verbesserter Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
-* REDAXO-Modul
 
 Hinweise
 --------
@@ -19,8 +19,7 @@ Hinweise
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
 * Per CSS-Klasse `ckeditor` kann man den CKEditor auch in den MetaInfos oder im XForm TableManager verwenden.
-* Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) (ab v1.2.6!) empfohlen um die Email-Adressen vor Spambots zu schützen.
-* Einstellungen für den CKEditor in: `/files/addons/ckeditor/vendor/config.js` (befindet sich also im `'files/addons/` Ordner von REDAXO und nicht vom AddOn selbst)
+* Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
 
 Changelog
 ---------
@@ -37,4 +36,5 @@ Credits
 -------
 
 * [CKEditor](http://ckeditor.com/)
+* [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
 
