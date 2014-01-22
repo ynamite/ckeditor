@@ -37,4 +37,5 @@ Credits
 
 * [CKEditor](http://ckeditor.com/)
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
+* [webghostx](https://github.com/webghostx) für die investigative Arbeit mit der CKEdior Config ;)
 

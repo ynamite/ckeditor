@@ -48,6 +48,7 @@ if (isset($_REQUEST["install"]) && $_REQUEST["install"] == 1) {
 <div class="rex-addon-output">
 	<h2 class="rex-hl2"><?php echo $I18N->msg('ckeditor_lite_module'); ?></h2>
 	<div class="rex-area-content module">
+		<p><?php echo $I18N->msg('ckeditor_module_lite_desc'); ?></p>
 		<ul>
 		<?php
 			if ($module_id > 0) {
