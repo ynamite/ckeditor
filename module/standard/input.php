@@ -9,7 +9,8 @@ jQuery(document).ready(function($) {
 	CKEDITOR.replace('VALUE[1]', {
 		height: 400,
 		fillEmptyBlocks: false,
-		entities: false
+		entities: false,
+		extraPlugins: 'showborders'
 		// no comma after last entry!!!
 	});
 });

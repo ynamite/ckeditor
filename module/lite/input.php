@@ -24,6 +24,7 @@ jQuery(document).ready(function($) {
 			['Table'],
 			['PasteText', 'PasteFromWord'],
 			['rex_help']
+			// no comma after last entry!!!
 		]
 		// no comma after last entry!!!
 	});
