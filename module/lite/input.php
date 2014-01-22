@@ -12,10 +12,10 @@ jQuery(document).ready(function($) {
 		forcePasteAsPlainText: true,
 		entities: false,
 		linkShowTargetTab: false,
-		forcePasteAsPlainText: true,
 		format_tags: 'p;h2;h3',
 		removePlugins: 'elementspath',
-		extraPlugins: 'showborders,rex_help',
+		extraPlugins: 'rex_help',
+		removeButtons: '',
 		toolbar: [
 			['Format'],
 			['Bold', 'Italic'],
