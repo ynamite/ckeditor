@@ -339,6 +339,7 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 			{
 				id: 'src',
 				type: 'text',
+				className: 'rex-url',
 				label: commonLang.url,
 				onKeyup: onChangeSrc,
 				onChange: onChangeSrc,
@@ -349,6 +350,14 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 					widget.setData( 'src', this.getValue() );
 				},
 				validate: CKEDITOR.dialog.validate.notEmpty( lang.urlMissing )
+			},
+			{
+				type: 'button',
+				id: 'medialink',
+				label: 'Medienpool Link',
+				align: 'center',
+				style: 'display:inline-block;margin-top:14px;',
+				onClick: function() { openMediaPool('TINY'); }
 			}
 		];
 
@@ -370,7 +379,7 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 
 	return {
 		title: lang.title,
-		minWidth: 250,
+		minWidth: 350,
 		minHeight: 100,
 		onLoad: function() {
 			// Create a "global" reference to the document for this dialog instance.
@@ -487,10 +496,10 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 								id: 'align',
 								type: 'radio',
 								items: [
-									[ 'None', 'none' ],
-									[ 'Left', 'left' ],
-									[ 'Center', 'center' ],
-									[ 'Right', 'right' ] ],
+									[ 'Keine', 'none' ],
+									[ 'Links', 'left' ],
+									[ 'Zentriert', 'center' ],
+									[ 'Rechts', 'right' ] ],
 								label: commonLang.align,
 								setup: function( widget ) {
 									this.setValue( widget.data.align );
@@ -539,3 +548,20 @@ CKEDITOR.dialog.add( 'image2', function( editor ) {
 		]
 	};
 } );
+
+/* -------------------------- REDAXO -------------------------- */
+
+function insertFileLink(link) {
+	jQuery('.rex-url input').val("/" + link);
+}
+
+function getParam(variable){ 
+     var query = window.location.search.substring(1);  
+     var vars = query.split("&"); 
+      for (var i=0;i<vars.length;i++) {   
+            var pair = vars[i].split("=");  
+            if(pair[0] == variable){return pair[1];}
+       }       return(false);
+}
+
+/* -------------------------- REDAXO -------------------------- */
