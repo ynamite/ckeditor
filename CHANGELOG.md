@@ -5,7 +5,7 @@ CKEditor AddOn - Changelog
 
 * AddOn Rewrite inkl. Update auf CKEditor 4.3.2 Standard + einige extra Plugins (siehe Readme)
 * 2 neue Beispielmodule mit integrierter Konfiguration
-* Mediepool-Button zum Image-Dialog hinzugefügt
+* Medienpool-Button zum Image-Dialog hinzugefügt
 * Smart Strip Einstellung um leere P's und multiple BR's zu entfernen
 * Abschnitt "CKEditor Toolbar Buttons" zur Readme hinzugefügt, thx@webghost
 * Abschnitt "Custom Styles hinzufügen (ausgehend vom Lite Modul)" zur Readme hinzugefügt, thx@webghost
