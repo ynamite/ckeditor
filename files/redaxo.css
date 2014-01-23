@@ -1,11 +1,18 @@
 
+/* Add shadow to dialogs */
 .cke_dialog {
 	box-shadow: 2px 2px 12px #000 !important;
 }
 
+/* Color of background overlay when dialog is visible*/
 .cke_dialog_background_cover {
 	background-color: black !important; 
 	opacity: 0.5 !important;
+}
+
+/* Remove resizer grip of dialogs */
+.cke_dialog_footer .cke_resizer {
+	display: none !important;
 }
 
 /* -------------------------------------------------- */

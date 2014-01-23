@@ -30,15 +30,3 @@ jQuery(document).ready(function($) {
 	});
 });
 </script>
-
-<style type="text/css">
-/* Remove resizer grip of dialogs */
-.cke_dialog_footer .cke_resizer {
-	display: none !important;
-}
-
-/* Remove resizer grip of texteditor */
-.cke_bottom .cke_resizer {
-	visibility: hidden !important;
-}
-</style>

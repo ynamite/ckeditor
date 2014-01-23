@@ -5,11 +5,18 @@ class rex_ckeditor_utils {
 	}
 
 	public static function getHtml() {
+		global $REX;
+
 		$html = PHP_EOL;
 
 		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
 		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.css" />' . PHP_EOL;
 		$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
+
+		if ($REX['ADDON']['ckeditor']['settings']['smart_strip'] == '1') {
+			$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.js"></script>' . PHP_EOL;
+		}
+
 		$html .= '<!-- END ckeditor -->';
 
 		return $html;

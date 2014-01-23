@@ -13,23 +13,15 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
-Zusätzlich mitgelieferte CKEditor Plugins
------------------------------------------
+Zusätzlich CKEditor Plugins
+---------------------------
 
-* Color Button
-* Div Container Manager
-* Enhanced Image
-* Justify
-* Show Table Borders
+Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders
 
-Enfernte CKEditor Plugins
--------------------------
+Entfernte CKEditor Plugins
+--------------------------
 
-* About CKEditor
-* Accessibility Help
-* Image
-* SpellCheckAsYouType (SCAYT)
-* WebSpellChecker
+About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
 
 Mehrere CKEditors in einem Modul
 -------------------------------

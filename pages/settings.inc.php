@@ -3,12 +3,12 @@
 $configFile = $REX['INCLUDE_PATH'] . '/addons/ckeditor/settings.inc.php';
 
 if (rex_request('func', 'string') == 'update') {
-	$foo = trim(rex_request('foo', 'string'));
+	$smart_strip = trim(rex_request('smart_strip', 'string'));
 
-	$REX['ADDON']['ckeditor']['settings']['foo'] = $foo;
+	$REX['ADDON']['ckeditor']['settings']['smart_strip'] = $smart_strip;
 
 	$content = '
-		$REX[\'ADDON\'][\'ckeditor\'][\'settings\'][\'foo\'] = "' . $foo . '";
+		$REX[\'ADDON\'][\'ckeditor\'][\'settings\'][\'smart_strip\'] = "' . $smart_strip . '";
 	';
 
 	if (rex_replace_dynamic_contents($configFile, str_replace("\t", "", $content)) !== false) {
@@ -38,8 +38,8 @@ if (!is_writable($configFile)) {
 
 					<div class="rex-form-row rex-form-element-v1">
 						<p class="rex-form-text">
-							<label for="foo"><?php echo $I18N->msg('ckeditor_settings_foo'); ?></label>
-							<input type="text" value="<?php echo $REX['ADDON']['ckeditor']['settings']['foo']; ?>" id="foo" name="foo" class="rex-form-text">
+							<label for="smart_strip"><?php echo $I18N->msg('ckeditor_settings_smart_strip'); ?></label>
+							<input type="checkbox" name="smart_strip" id="smart_strip" value="1" <?php if ($REX['ADDON']['ckeditor']['settings']['smart_strip'] == 1) { echo 'checked="checked"'; } ?>>
 						</p>
 					</div>
 

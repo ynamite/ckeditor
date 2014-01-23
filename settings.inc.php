@@ -1,4 +1,4 @@
 <?php
 // --- DYN
-$REX['ADDON']['ckeditor']['settings']['foo'] = "bar";
+$REX['ADDON']['ckeditor']['settings']['smart_strip'] = "1";
 // --- /DYN
