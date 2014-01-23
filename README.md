@@ -18,7 +18,7 @@ CKEditor Plugins
 
 * Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders, rex_help
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
-* Modifiziert: Link Dialog, Table Dialog, Image Dialog
+* Modifiziert: Link, Table, Image2
 
 Mehrere CKEditors in einem Modul
 --------------------------------
