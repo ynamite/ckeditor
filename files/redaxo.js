@@ -1,7 +1,7 @@
 jQuery(document).ready( function($) {
     $('div.rex-form-content-editmode-edit-slice #REX_FORM').submit(function() {
 		//this is the foreach loop
-		for(var i in CKEDITOR.instances) {
+		for (var i in CKEDITOR.instances) {
 			// strip empty paragraphs out if there are any, can also be done via php in output module
 		    var data = CKEDITOR.instances[i].getData();
 		    var doDataUpdate = false;

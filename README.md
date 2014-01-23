@@ -13,18 +13,15 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
-Zusätzlich CKEditor Plugins
----------------------------
+CKEditor Plugins
+----------------
 
-Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders
-
-Entfernte CKEditor Plugins
---------------------------
-
-About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
+* Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders
+* Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
+* Modifiziert: ...
 
 Mehrere CKEditors in einem Modul
--------------------------------
+--------------------------------
 
 ```html
 <textarea name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
@@ -33,12 +30,12 @@ Mehrere CKEditors in einem Modul
 <script type="text/javascript">
 jQuery(document).ready(function($) {
 	CKEDITOR.replace('VALUE[1]', {
-		height: 200
+		height: 200,
 		// ...
 	});
 
 	CKEDITOR.replace('VALUE[2]', {
-		height: 400
+		height: 400,
 		// ...
 	});
 });
