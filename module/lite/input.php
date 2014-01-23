@@ -2,7 +2,7 @@
 // module: ckeditor_lite_in
 ?> 
 
-<textarea name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea>
+<textarea name="VALUE[1]" class="ckeditor" style="display: none;">REX_VALUE[1]</textarea>
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {
