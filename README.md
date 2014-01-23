@@ -9,7 +9,8 @@ Features
 * CKEditor 4.3.2 Standard
 * REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
 * CKEditor Einstellungen werden im Modul direkt vorgenommen
-* Verbesserter Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
+* Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
+* Imagedialog: Unterstützung für Mediepool-Links
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
@@ -18,7 +19,7 @@ CKEditor Plugins
 
 * Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders, rex_help
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
-* Modifiziert: Link, Table, Image2
+* Modifiziert: Image2, Link, Table
 
 Mehrere CKEditors in einem Modul
 --------------------------------
