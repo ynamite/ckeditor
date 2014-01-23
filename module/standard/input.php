@@ -9,28 +9,24 @@ jQuery(document).ready(function($) {
 	CKEDITOR.replace('VALUE[1]', {
 		height: 400,
 		fillEmptyBlocks: false,
-		forcePasteAsPlainText: true,
+		forcePasteAsPlainText: false,
 		entities: false,
 		linkShowTargetTab: true,
-		//format_tags: '',
-		removePlugins: 'div,justify,colorbutton',
+		format_tags: 'p;h1;h2;h3;pre',
+		removePlugins: '',
 		extraPlugins: 'rex_help',
-		removeButtons: '',
-		toolbarGroups: [
-			{ name: 'clipboard',   groups: [ 'clipboard', 'undo', 'align' ] },
-			{ name: 'editing',     groups: [ 'find', 'selection' ] },
-			{ name: 'links' },
-			{ name: 'insert' },
-			{ name: 'forms' },
-			{ name: 'tools' },
-			{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
-			{ name: 'others' },
+		removeDialogTabs: 'link:advanced',
+		toolbar: [
+			['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
+			['Link', 'Unlink', 'Anchor'],
+			['Image', 'Table', 'Seperator', 'HorizontalRule', 'SpecialChar'],
+			['Maximize'],
+			['Source'],
 			'/',
-			{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-			{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks' ] },
-			{ name: 'styles' },
-			{ name: 'colors' },
-			{ name: 'rex_help' }
+			['Bold', 'Italic', 'Strike', '-', 'RemoveFormat'],
+			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote'],
+			['Styles', 'Format'],
+			['rex_help']
 			// no comma after last entry!!!
 		]
 		// no comma after last entry!!!

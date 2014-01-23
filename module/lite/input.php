@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 		format_tags: 'p;h2;h3',
 		removePlugins: 'elementspath',
 		extraPlugins: 'rex_help',
-		removeButtons: '',
+		removeDialogTabs: 'link:advanced',
 		toolbar: [
 			['Format'],
 			['Bold', 'Italic'],
