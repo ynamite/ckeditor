@@ -18,7 +18,7 @@ CKEditor Plugins
 
 * Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders, rex_help
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
-* Modifiziert: ...
+* Modifiziert: Link Dialog, Table Dialog, Image Dialog
 
 Mehrere CKEditors in einem Modul
 --------------------------------
@@ -82,6 +82,7 @@ Hinweise
 * Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
 * Per CSS-Klasse `ckeditor` kann man den CKEditor auch in den MetaInfos oder im XForm TableManager verwenden.
 * Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
+* Durchgeführte Modifizierungen am CKEditor: https://github.com/RexDude/ckeditor/issues/15
 
 Changelog
 ---------
