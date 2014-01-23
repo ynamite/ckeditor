@@ -14,7 +14,7 @@
 <style type="text/css">
 #logo {
 	text-align: center;
-	margin-top: 45px;
+	margin-top: 50px;
 	margin-bottom: 10px;
 }
 </style>
