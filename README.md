@@ -21,6 +21,11 @@ CKEditor Plugins
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
 * Modifiziert: Image2, Link, Table
 
+CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
+------------------------------------------------------
+
+Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. Möchte man eine spezielle Konfiguration so muss man wie in dem Modulen vorgehen.
+
 Mehrere CKEditors in einem Modul
 --------------------------------
 
@@ -58,11 +63,6 @@ CKEDITOR.stylesSet.add( 'default', [
 	// no comma after last entry!!!
 ]);
 ```
-
-CKEditor in AddOns wie XForm, MetaInfos einsetzen
--------------------------------------------------
-
-Die Textarea muss lediglich die CSS.Klasse zugewiesen bekommen: `ckeditor`. Möchte man eine spezielle Konfiguration so muss man wie in dem Modulen vorgehen.
 
 CKEditor Toolbar Buttons
 ------------------------
