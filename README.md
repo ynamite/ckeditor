@@ -16,7 +16,7 @@ Features
 CKEditor Plugins
 ----------------
 
-* Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders
+* Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders, rex_help
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
 * Modifiziert: ...
 
@@ -99,5 +99,6 @@ Credits
 
 * [CKEditor](http://ckeditor.com/)
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
+* [Xong](https://github.com/xong) für die RegEx-Hilfe
 * [webghostx](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config ;)
 
