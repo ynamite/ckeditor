@@ -24,7 +24,7 @@ CKEditor Plugins
 CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
 ------------------------------------------------------
 
-Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. Möchte man eine spezielle Konfiguration so muss man wie in dem Modulen vorgehen.
+Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. Möchte man eine spezielle Konfiguration so muss man wie in den Modulen vorgehen.
 
 Mehrere CKEditors in einem Modul
 --------------------------------
