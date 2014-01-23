@@ -341,8 +341,8 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 				'default': 'url',
 				items: [
 					[ linkLang.toUrl, 'url' ],
-					[ linkLang.toAnchor, 'anchor' ],
-					[ linkLang.toEmail, 'email' ]
+					[ linkLang.toEmail, 'email' ],
+					[ linkLang.toAnchor, 'anchor' ]
 					],
 				onChange: linkTypeChanged,
 				setup: function( data ) {
@@ -364,14 +364,13 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 						{
 						id: 'protocol',
 						type: 'select',
+						className: 'rex-protocol',
 						label: commonLang.protocol,
 						'default': 'http://',
 						items: [
 							// Force 'ltr' for protocol names in BIDI. (#5433)
 							[ 'http://\u200E', 'http://' ],
 							[ 'https://\u200E', 'https://' ],
-							[ 'ftp://\u200E', 'ftp://' ],
-							[ 'news://\u200E', 'news://' ],
 							[ linkLang.other, '' ]
 							],
 						setup: function( data ) {
@@ -390,6 +389,7 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 						id: 'url',
 						label: commonLang.url,
 						required: true,
+						className: 'rex-url',
 						onLoad: function() {
 							this.allowOnChange = true;
 						},
@@ -397,8 +397,8 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 							this.allowOnChange = false;
 							var protocolCmb = this.getDialog().getContentElement( 'info', 'protocol' ),
 								url = this.getValue(),
-								urlOnChangeProtocol = /^(http|https|ftp|news):\/\/(?=.)/i,
-								urlOnChangeTestOther = /^((javascript:)|[#\/\.\?])/i;
+								urlOnChangeProtocol = /^(http|https):\/\/(?=.)/i,
+								urlOnChangeTestOther = /^((redaxo|files)|[#\/\.\?])/i;
 
 							var protocol = urlOnChangeProtocol.exec( url );
 							if ( protocol ) {
@@ -455,12 +455,19 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 							this.getElement().show();
 					}
 				},
+				{
+					type: 'button',
+					id: 'internallink',
+					label: 'Interner Link',
+					style: 'float : right;',
+					onClick: function() { openLinkMap("TINY", "&clang=" + getParam("clang")); }
+				},
 					{
 					type: 'button',
-					id: 'browse',
-					hidden: 'true',
-					filebrowser: 'info:url',
-					label: commonLang.browseServer
+					id: 'medialink',
+					label: 'Medienpool Link',
+					style: 'float : right;',
+					onClick: function() { openMediaPool('TINY'); }
 				}
 				]
 			},
@@ -607,38 +614,6 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 
 						data.email.address = this.getValue();
 					}
-				},
-					{
-					type: 'text',
-					id: 'emailSubject',
-					label: linkLang.emailSubject,
-					setup: function( data ) {
-						if ( data.email )
-							this.setValue( data.email.subject );
-					},
-					commit: function( data ) {
-						if ( !data.email )
-							data.email = {};
-
-						data.email.subject = this.getValue();
-					}
-				},
-					{
-					type: 'textarea',
-					id: 'emailBody',
-					label: linkLang.emailBody,
-					rows: 3,
-					'default': '',
-					setup: function( data ) {
-						if ( data.email )
-							this.setValue( data.email.body );
-					},
-					commit: function( data ) {
-						if ( !data.email )
-							data.email = {};
-
-						data.email.body = this.getValue();
-					}
 				}
 				],
 				setup: function( data ) {
@@ -666,12 +641,7 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
 					style: 'width : 100%;',
 					'items': [
 						[ commonLang.notSet, 'notSet' ],
-						[ linkLang.targetFrame, 'frame' ],
-						[ linkLang.targetPopup, 'popup' ],
-						[ commonLang.targetNew, '_blank' ],
-						[ commonLang.targetTop, '_top' ],
-						[ commonLang.targetSelf, '_self' ],
-						[ commonLang.targetParent, '_parent' ]
+						[ commonLang.targetNew, '_blank' ]
 						],
 					onChange: targetChanged,
 					setup: function( data ) {
@@ -1291,3 +1261,27 @@ CKEDITOR.dialog.add( 'link', function( editor ) {
  * @cfg {String} [emailProtection='' (empty string = disabled)]
  * @member CKEDITOR.config
  */
+
+/* -------------------------- REDAXO -------------------------- */
+
+function insertLink(link, name) {
+	jQuery('.rex-url input').val(link);
+	jQuery('.rex-protocol option:last').attr("selected","selected");
+}
+
+function insertFileLink(link) {
+	jQuery('.rex-url input').val("/" + link);
+	jQuery('.rex-protocol option:last').attr("selected","selected");
+}
+
+function getParam(variable){ 
+     var query = window.location.search.substring(1);  
+     var vars = query.split("&"); 
+      for (var i=0;i<vars.length;i++) {   
+            var pair = vars[i].split("=");  
+            if(pair[0] == variable){return pair[1];}
+       }       return(false);
+}
+
+/* -------------------------- REDAXO -------------------------- */
+
