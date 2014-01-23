@@ -59,6 +59,11 @@ CKEDITOR.stylesSet.add( 'default', [
 ]);
 ```
 
+CKEditor in AddOns wie XForm, MetaInfos einsetzen
+-------------------------------------------------
+
+Die Textarea muss lediglich die CSS.Klasse zugewiesen bekommen: `ckeditor`. Möchte man eine spezielle Konfiguration so muss man wie in dem Modulen vorgehen.
+
 CKEditor Toolbar Buttons
 ------------------------
 
@@ -81,7 +86,6 @@ Hinweise
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
 * Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
-* Per CSS-Klasse `ckeditor` kann man den CKEditor auch in den MetaInfos oder im XForm TableManager verwenden.
 * Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
 * Durchgeführte Modifizierungen am CKEditor: https://github.com/RexDude/ckeditor/issues/15
 
