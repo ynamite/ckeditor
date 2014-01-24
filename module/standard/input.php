@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 			['rex_help'],
 			'/',
 			['Format', 'Styles'],
-			['Bold', 'Italic', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+			['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
 			['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
 			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
 			// no comma after last entry!!!
