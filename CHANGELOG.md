@@ -1,6 +1,13 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 2.1.0 - 24. Januar 2014
+
+* Module verbessert, CKEditor Replace jetzt per Textarea ID
+* Custom Styles Beispiel in der Readme verbessert (vollständiges Beispiel-Modul hinzugefügt). Kommt jetzt ganz ohne eine extra CSS-Datei aus, thx@webghost
+* Bilder haben einen Abstand bekommen zum Text
+* Standard Modul: Alle verfügbaren Buttons und somit Funktionen hinzugefügt
+
 ### Version 2.0.0 - 23. Januar 2014
 
 * AddOn Rewrite inkl. Update auf CKEditor 4.3.2 Standard + einige extra Plugins (siehe Readme)

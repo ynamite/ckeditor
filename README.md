@@ -26,8 +26,8 @@ CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
 
 Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. Möchte man eine spezielle Konfiguration so muss man wie in den Modulen vorgehen.
 
-Mehrere CKEditors in einem Modul
---------------------------------
+Mehrere CKEditoren in einem Modul
+---------------------------------
 
 ```html
 <textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
@@ -54,7 +54,7 @@ Custom Styles hinzufügen
 Das Modul (hier das Lite Modul) muss wie folgt ergänzt werden:
 
 * Die Styles Combobox zur Toolbar hinzufügen
-* Custom CSS für den Editor hinzufügen
+* Custom CSS für den Editor hinzufügen (contentsCss)
 * Ein neues StyleSet hinzufügen
 
 ```html
