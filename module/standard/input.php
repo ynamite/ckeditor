@@ -27,8 +27,8 @@ jQuery(document).ready(function($) {
 			'/',
 			['Format', 'Styles'],
 			['Bold', 'Italic', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
-			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote'],
-			['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock']
+			['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
 			// no comma after last entry!!!
 		]
 		// no comma after last entry!!!

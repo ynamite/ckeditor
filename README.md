@@ -55,7 +55,7 @@ Das Modul (hier das Lite Modul) muss wie folgt ergänzt werden:
 
 * Die Styles Combobox zur Toolbar hinzufügen
 * Custom CSS für den Editor hinzufügen (contentsCss)
-* Ein neues StyleSet hinzufügen
+* Bestehendes StyleSet (definiert in `/files/addons/ckeditor/vendor/styles.js`) ersetzen
 
 ```html
 <textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea>
