@@ -141,5 +141,5 @@ Credits
 * [CKEditor](http://ckeditor.com/)
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
 * [Xong](https://github.com/xong) für die RegEx-Hilfe
-* [webghostx](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config ;)
+* [webghost](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config ;)
 
