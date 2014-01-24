@@ -20,13 +20,15 @@ jQuery(document).ready(function($) {
 			['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
 			['Link', 'Unlink', 'Anchor'],
 			['Image', 'Table', 'Seperator', 'HorizontalRule', 'SpecialChar'],
+			['CreateDiv'],
 			['Maximize'],
 			['Source'],
+			['rex_help'],
 			'/',
-			['Bold', 'Italic', 'Strike', '-', 'RemoveFormat'],
-			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote'],
-			['Styles', 'Format'],
-			['rex_help']
+			['Format', 'Styles'],
+			['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+			['Bold', 'Italic', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
 			// no comma after last entry!!!
 		]
 		// no comma after last entry!!!
