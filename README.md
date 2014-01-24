@@ -30,17 +30,17 @@ Mehrere CKEditors in einem Modul
 --------------------------------
 
 ```html
-<textarea name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
-<textarea name="VALUE[2]" style="display: none;">REX_VALUE[2]</textarea>
+<textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
+<textarea id="ckeditor2" name="VALUE[2]" style="display: none;">REX_VALUE[2]</textarea>
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {
-	CKEDITOR.replace('VALUE[1]', {
+	CKEDITOR.replace('ckeditor1', {
 		height: 200,
 		// ...
 	});
 
-	CKEDITOR.replace('VALUE[2]', {
+	CKEDITOR.replace('ckeditor2', {
 		height: 400,
 		// ...
 	});
