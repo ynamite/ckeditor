@@ -48,20 +48,55 @@ jQuery(document).ready(function($) {
 </script>
 ```
 
-Custom Styles hinzufügen (ausgehend vom Lite Modul)
---------------------------------------------------
+Custom Styles hinzufügen
+------------------------
 
-* Datei `/files/addons/ckeditor/custom.css` anlegen und CSS hinzufügen z.b. `.green { color: green; }`
-* Im Modul die Custom CSS Datei in der CKEditor Config angeben: `contentsCss: ['/files/addons/ckeditor/custom.css', CKEDITOR.basePath + 'contents.css']`
-* Im Modul die Styles Combobox zur Toolbar hinzufügen: `['Format', 'Styles']`
-* Im Modul ein neues StyleSet für den CKEditor hinzufügen (ausserhalb von `CKEDITOR.replace` aber innerhalb von `jQuery(document).ready(function($)`):
+Das Modul (hier das Lite Modul) muss wie folgt ergänzt werden:
 
-```javascript
-CKEDITOR.stylesSet.add( 'default', [
-	{ name: 'Grün', element: 'span', attributes: { 'class': 'green' } },
-	{ name: 'Blau', element: 'span', attributes: { 'class': 'blue' } }
-	// no comma after last entry!!!
-]);
+* Die Styles Combobox zur Toolbar hinzufügen
+* Custom CSS für den Editor hinzufügen
+* Ein neues StyleSet hinzufügen
+
+```html
+<textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	CKEDITOR.replace('ckeditor1', {
+		height: 400,
+		fillEmptyBlocks: false,
+		forcePasteAsPlainText: true,
+		entities: false,
+		linkShowTargetTab: false,
+		format_tags: 'p;h2;h3',
+		removePlugins: 'elementspath',
+		extraPlugins: 'rex_help',
+		removeDialogTabs: 'link:advanced',
+		toolbar: [
+			['Format', 'Styles'],
+			['Bold', 'Italic'],
+			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+			['Link', 'Unlink', 'Anchor'],
+			['Table'],
+			['PasteText', 'PasteFromWord'],
+			['rex_help']
+			// no comma after last entry!!!
+		],
+		contentsCss: [CKEDITOR.basePath + 'contents.css', 
+			'.green { background: lightgrey; color: green; }' +
+			'.blue { background: lightgrey; color: blue; }'
+			// no plus after last entry!!!
+		]
+		// no comma after last entry!!!
+	});
+
+	CKEDITOR.stylesSet.add('default', [
+		{ name: 'Grün', element: 'span', attributes: { 'class': 'green' } },
+		{ name: 'Blau', element: 'span', attributes: { 'class': 'blue' } }
+		// no comma after last entry!!!
+	]);
+});
+</script>
 ```
 
 CKEditor Toolbar Buttons
