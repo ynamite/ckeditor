@@ -53,7 +53,7 @@ if (isset($_REQUEST["install"]) && $_REQUEST["install"] == 1) {
 		<?php
 			if ($module_id > 0) {
 				if (!isset($_REQUEST["install"])) {
-					echo '<li><a href="index.php?page=ckeditor&amp;subpage=lite_module&amp;install=1&amp;module_id=' . $module_id . '">' . $I18N->msg('ckeditor_module_update') . '</a></li>';
+					echo '<li><a id="update-module" href="index.php?page=ckeditor&amp;subpage=lite_module&amp;install=1&amp;module_id=' . $module_id . '">' . $I18N->msg('ckeditor_module_update') . '</a></li>';
 				}
     		} else {
 				if (!isset($_REQUEST["install"])) {
@@ -68,3 +68,12 @@ if (isset($_REQUEST["install"]) && $_REQUEST["install"] == 1) {
 	</div>
 </div>
 
+<script type="text/javascript">
+jQuery(document).ready( function() {
+	jQuery('a#update-module').click(function(e) {
+		if (!confirm("<?php echo $I18N->msg('ckeditor_module_update_msg'); ?>")) {
+			e.preventDefault();
+		}
+	});
+});
+</script>

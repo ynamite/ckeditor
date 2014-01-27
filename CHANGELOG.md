@@ -1,6 +1,10 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 2.1.1 DEV
+
+* Bestätigungsdialog bei Modulaktualisierung hinzugefügt
+
 ### Version 2.1.0 - 24. Januar 2014
 
 * Module verbessert, CKEditor Replace jetzt per Textarea ID

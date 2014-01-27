@@ -33,4 +33,6 @@ ckeditor_module_update = Bestehendes Modul aktualisieren
 ckeditor_module_install = Modul jetzt automatisch installieren
 
 ckeditor_module_lite_desc = Dieses Modul beinhaltet eine minimale CKEditor Konfiguration. <br />Bilder sollten extra z.B. per REX_MEDIA_BUTTON hinzugefügt werden (wenn benötigt).
-ckeditor_module_standard_desc = Dieses Modul beinhaltet die Standard CKEditor Konfiguration inkl. aller extra Plugins. 
+ckeditor_module_standard_desc = Dieses Modul beinhaltet die Standard CKEditor Konfiguration inkl. aller extra Plugins.
+
+ckeditor_module_update_msg = Sind Sie sicher, dass Sie das bestehende Modul aktualisieren wollen?
