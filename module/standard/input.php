@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
 			['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
 			['Link', 'Unlink', 'Anchor'],
 			['Image', 'Table', 'Seperator', 'HorizontalRule', 'SpecialChar'],
+			['TextColor', 'BGColor'],
 			['CreateDiv'],
 			['Maximize'],
 			['Source'],
