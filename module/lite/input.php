@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 		entities: false,
 		linkShowTargetTab: false,
 		format_tags: 'p;h2;h3',
-		removePlugins: 'elementspath',
+		removePlugins: 'elementspath,image2',
 		extraPlugins: 'rex_help',
 		removeDialogTabs: 'link:advanced',
 		toolbar: [
