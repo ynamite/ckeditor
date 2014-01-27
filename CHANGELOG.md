@@ -4,6 +4,7 @@ CKEditor AddOn - Changelog
 ### Version 2.1.1 - 27. Januar 2014
 
 * Image2 Plugin aus Litemodul entfernt, da unter Umständen Bilder per Copy And Paste im Editor landen konnten
+* Fehlende ColorButtons zum Standardmodul hinzugefügt
 * Bestätigungsdialog bei Modulaktualisierung hinzugefügt
 * Finetuning
 
