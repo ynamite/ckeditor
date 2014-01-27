@@ -9,6 +9,7 @@ Features
 * CKEditor 4.3.2 Standard
 * REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
 * CKEditor Einstellungen werden im Modul direkt vorgenommen
+* Smart Strip Einstellung die leere P's und mehrfach vorkommende BR's herausfiltert
 * Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
 * Imagedialog: Unterstützung für Mediepool-Links
 * Vereinfachter Tabellendialog
