@@ -1,5 +1,5 @@
 jQuery(document).ready( function($) {
-    $('div.rex-form-content-editmode-edit-slice #REX_FORM').submit(function() {
+    $('form').submit(function() {
 		for (var i in CKEDITOR.instances) {
 		    var data = CKEDITOR.instances[i].getData();
 		    var doDataUpdate = false;
