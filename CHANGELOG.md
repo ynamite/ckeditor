@@ -1,6 +1,10 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 2.2.0 DEV
+
+* Fixed #16: Smart Strip Einstellung greift jetzt auch, wenn man den CKEditor per CSS Klasse `ckeditor` aufruft
+
 ### Version 2.1.1 - 27. Januar 2014
 
 * Image2 Plugin aus Litemodul entfernt, da unter Umständen Bilder per Copy And Paste im Editor landen konnten
