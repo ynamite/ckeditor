@@ -3,6 +3,7 @@ CKEditor AddOn - Changelog
 
 ### Version 2.2.0 DEV
 
+* Fixed #17: Geschützte Leerzeichen werden nicht mehr komplett entfernt, thx@webghost
 * Fixed #16: Smart Strip Einstellung greift jetzt auch, wenn man den CKEditor per CSS Klasse `ckeditor` aufruft
 
 ### Version 2.1.1 - 27. Januar 2014

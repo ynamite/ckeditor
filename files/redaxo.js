@@ -6,7 +6,7 @@ jQuery(document).ready( function($) {
 
 			// replace &nbsp;
 			if (data.indexOf("&nbsp;") != -1) {
-				data = data.replace(/&nbsp;/g, "");
+				data = data.replace(/&nbsp;/g, "  ");
 				doDataUpdate = true;
 			}
 
