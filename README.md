@@ -116,14 +116,20 @@ CKEditor Toolbar Buttons
 * UIColor, Maximize, ShowBlocks
 * About
 
+Links
+-----
+
+* CKEditor Addon für REDAXO konfigurieren: http://usysto.net/blog/redaxo_ckeditor_addon.php
+* REDAXO Artikel im Frontend editieren mit dem CKEditor: http://usysto.net/blog/redaxo_frontend_edit_mit_ckeditor.php
+* Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
+* Durchgeführte Modifizierungen am CKEditor: https://github.com/RexDude/ckeditor/issues/15
+
 Hinweise
 --------
 
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
-* Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
 * Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
-* Durchgeführte Modifizierungen am CKEditor: https://github.com/RexDude/ckeditor/issues/15
 
 Changelog
 ---------
@@ -142,5 +148,5 @@ Credits
 * [CKEditor](http://ckeditor.com/)
 * [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
 * [Xong](https://github.com/xong) für die RegEx-Hilfe
-* [webghost](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config ;)
+* [webghost](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config und und und... ;)
 
