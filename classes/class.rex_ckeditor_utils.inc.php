@@ -9,8 +9,14 @@ class rex_ckeditor_utils {
 
 		$html = PHP_EOL;
 
+
 		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
 		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.css" />' . PHP_EOL;
+
+		if ($REX['ADDON']['ckeditor']['settings']['resize_grip'] != '1') {
+			$html .= '<style type="text/css">.cke_bottom .cke_resizer { visibility: hidden !important; }</style>' . PHP_EOL;
+		}
+
 		$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
 
 		if ($REX['ADDON']['ckeditor']['settings']['smart_strip'] == '1') {

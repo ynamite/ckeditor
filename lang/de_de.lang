@@ -20,6 +20,7 @@ ckeditor_configfile_nosave = Einstellungen konnten nicht gespeichert werden!
 ckeditor_configfile_nowrite = Konfigurationsdatei "{0}" ist nicht beschreibbar!
 
 ckeditor_settings_smart_strip = Smart Strip<br />(entfernt leere P-Tags und multiple BR-Tags)
+ckeditor_settings_resize_grip = Resize Grip
 ckeditor_settings_save = Einstellungen speichern
 
 ckeditor_module_input = Eingabe

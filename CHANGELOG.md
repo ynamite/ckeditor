@@ -5,6 +5,7 @@ CKEditor AddOn - Changelog
 
 * Fixed #17: Geschützte Leerzeichen werden nicht mehr komplett entfernt, thx@webghost
 * Fixed #16: Smart Strip Einstellung greift jetzt auch, wenn man den CKEditor per CSS Klasse `ckeditor` aufruft
+* Resize Grip Einstellung hinzugefügt um zu steuern ob der Resize Grip zum vergrößern des Editors angezeigt wird
 * Weitereführende Links und Artikel u.a. von webghost in die Readme gepackt
 
 ### Version 2.1.1 - 27. Januar 2014
