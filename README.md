@@ -25,10 +25,10 @@ CKEditor Plugins
 CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
 ------------------------------------------------------
 
-Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. Möchte man eine spezielle Konfiguration so muss man wie in den Modulen vorgehen.
+Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen (geht auch in Modulen). Möchte man eine spezielle Konfiguration so muss man per `CKEDITOR.replace` (s.u.) vorgehen.
 
-Mehrere CKEditoren in einem Modul
----------------------------------
+Mehrere Editoren mit unterschiedler Konfiguration
+-------------------------------------------------
 
 ```html
 <textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
@@ -48,6 +48,26 @@ jQuery(document).ready(function($) {
 });
 </script>
 ```
+
+Mehrere Editoren mit gleicher Konfiguration
+-------------------------------------------
+
+```html
+<textarea id="ckeditor1" class="editors" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
+<textarea id="ckeditor2" class="editors" name="VALUE[2]" style="display: none;">REX_VALUE[2]</textarea>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$('.editors').each(function() {
+		CKEDITOR.replace($(this).attr('id'), {
+			height: 400,
+			// ...
+		});
+	});
+});
+</script>
+```
+
 
 Custom Styles hinzufügen
 ------------------------
