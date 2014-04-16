@@ -129,7 +129,7 @@ $text = <<< EOT
 REX_HTML_VALUE[1]
 EOT;
 
-echo '<p><strong>Output:</strong></p>' . $text;
+echo strtoupper($text);
 ?>
 ```
 
