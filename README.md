@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
 		entities: false,
 		linkShowTargetTab: false,
 		format_tags: 'p;h2;h3',
-		removePlugins: 'elementspath',
+		removePlugins: 'elementspath,image2',
 		extraPlugins: 'rex_help',
 		removeDialogTabs: 'link:advanced',
 		toolbar: [
@@ -120,13 +120,26 @@ jQuery(document).ready(function($) {
 </script>
 ```
 
+Ausgabe nachträglich manipulieren
+---------------------------------
+
+```php
+<?php
+$text = <<< EOT
+REX_HTML_VALUE[1]
+EOT;
+
+echo '<p><strong>Output:</strong></p>' . $text;
+?>
+```
+
 CKEditor Toolbar Buttons
 ------------------------
 
 * Source, Save, NewPage, DocProps, Preview, Print, Templates, document
 * Cut, Copy, Paste, PasteText, PasteFromWord, Undo, Redo
 * Find, Replace, SelectAll, Scayt
-* Form, Checkbox, Radio, TextField, Textarea, Select, Button, ImageButton, HiddenField
+* Form, Checkbox, Radio, TextField, Textarea, Select, Button, ImageButton, HiddenField (benötigt das Forms Plugin!)
 * Bold, Italic, Underline, Strike, Subscript, Superscript, RemoveFormat
 * NumberedList, BulletedList, Outdent, Indent, Blockquote, CreateDiv, JustifyLeft, JustifyCenter, JustifyRight, JustifyBlock, BidiLtr, BidiRtl
 * Link, Unlink, Anchor
