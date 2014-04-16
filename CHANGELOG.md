@@ -3,8 +3,8 @@ CKEditor AddOn - Changelog
 
 ### Version 2.2.1 DEV
 
-* Abschnitt `Mehrere Editoren mit gleicher Konfiguration` zur Readme hinzugefügt
-* Abschnitt `Ausgabe nachträglich manipulieren` zur Readme hinzugefügt
+* Abschnitt "Mehrere Editoren mit gleicher Konfiguration" zur Readme hinzugefügt
+* Abschnitt "Ausgabe nachträglich manipulieren" zur Readme hinzugefügt
 * Kleinere Readme-Korrekturen
 
 ### Version 2.2.0 - 08. Februar 2014
