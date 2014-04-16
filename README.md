@@ -59,9 +59,9 @@ Mehrere Editoren mit gleicher Konfiguration
 <script type="text/javascript">
 jQuery(document).ready(function($) {
 	$('.editors').each(function() {
-		var editorId = $(this).attr('id');
+		var id = $(this).attr('id');
 
-		CKEDITOR.replace(editorId, {
+		CKEDITOR.replace(id, {
 			height: 400,
 			// ...
 		});
