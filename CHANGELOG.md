@@ -1,7 +1,7 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 2.2.1 DEV
+### Version 2.2.1 - 17. April 2014
 
 * Abschnitt "Mehrere Editoren mit gleicher Konfiguration" zur Readme hinzugefügt
 * Abschnitt "Ausgabe nachträglich manipulieren" zur Readme hinzugefügt
