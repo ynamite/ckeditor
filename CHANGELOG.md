@@ -1,9 +1,11 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 2.3.0 DEV
+### Version 2.3.0 - 29. Juli 2014
 
 * Update auf CKEditor 4.4.3
+* Neues Image Modul (Text + Bild) hinzugefügt. Benötigt das be_utilities > jquery_ui Plugin
+* XForm Table Manager CSS verbessert
 
 ### Version 2.2.1 - 17. April 2014
 

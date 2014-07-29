@@ -2,7 +2,7 @@
 // init addon
 $REX['ADDON']['name']['ckeditor'] = 'CKEditor';
 $REX['ADDON']['page']['ckeditor'] = 'ckeditor';
-$REX['ADDON']['version']['ckeditor'] = '2.3.0 DEV';
+$REX['ADDON']['version']['ckeditor'] = '2.3.0';
 $REX['ADDON']['author']['ckeditor'] = "RexDude";
 $REX['ADDON']['supportpage']['ckeditor'] = 'forum.redaxo.de';
 $REX['ADDON']['perm']['ckeditor'] = 'ckeditor[]';
@@ -22,6 +22,7 @@ if ($REX['REDAXO']) {
 	$REX['ADDON']['ckeditor']['SUBPAGES'] = array(
 		array('', $I18N->msg('ckeditor_start')),
 		array('lite_module', $I18N->msg('ckeditor_lite_module')),
+		array('image_module', $I18N->msg('ckeditor_image_module')),
 		array('standard_module', $I18N->msg('ckeditor_standard_module')),
 		array('settings', $I18N->msg('ckeditor_settings')),
 		array('help', $I18N->msg('ckeditor_help'))

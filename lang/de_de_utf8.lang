@@ -2,6 +2,7 @@ ckeditor_addon_help = CKEditor für REDAXO
 
 ckeditor_start = Start
 ckeditor_lite_module = Lite Modul
+ckeditor_image_module = Image Modul
 ckeditor_standard_module = Standard Modul
 ckeditor_settings = Einstellungen
 ckeditor_help = Hilfe
@@ -25,8 +26,10 @@ ckeditor_settings_save = Einstellungen speichern
 
 ckeditor_module_input = Eingabe
 ckeditor_module_output = Ausgabe
+ckeditor_module_css = CSS
 
 ckeditor_module_name_lite = Texteditor (CKEditor Lite)
+ckeditor_module_name_image = Texteditor + Bild (CKEditor Lite)
 ckeditor_module_name_standard = Texteditor (CKEditor Standard)
 
 ckeditor_module_added = Modul "{0}" wurde angelegt
@@ -34,6 +37,7 @@ ckeditor_module_update = Bestehendes Modul aktualisieren
 ckeditor_module_install = Modul jetzt automatisch installieren
 
 ckeditor_module_lite_desc = Dieses Modul beinhaltet eine minimale CKEditor Konfiguration. <br />Bilder sollten extra z.B. per REX_MEDIA_BUTTON hinzugefügt werden (wenn benötigt).
+ckeditor_module_image_desc = Die minimale CKEditor Konfiguration inkl. Bildauswahl über ein REX_MEDIA_BUTTON. <br />Benötigt die CSS Anweisungen unten, die in das Stylesheet der Website (Frontend) von Hand kopiert werden müssen.<br />Außerdem wird jQuery UI für die Tabs benötigt. Installierbar über das <a target="_blank" href="http://www.redaxo.org/de/download/addons/?addon_id=1096" class="extern">Backend Utilities</a> Addon.<br />Unterstützt <a target="_blank" href="http://www.redaxo.org/de/download/addons/?addon_id=1060" class="extern">SEO42</a> und <a target="_blank" href="http://www.redaxo.org/de/download/addons/?addon_id=1131" class="extern">Magnific Popup</a> Features, und es können in der Modul Eingabe eigene Bildtypen angegeben werden.
 ckeditor_module_standard_desc = Dieses Modul beinhaltet die Standard CKEditor Konfiguration inkl. aller extra Plugins.
 
 ckeditor_module_update_msg = Sind Sie sicher, dass Sie das bestehende Modul aktualisieren wollen?

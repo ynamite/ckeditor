@@ -1,0 +1,13 @@
+div.image.float.left  {
+	float: left;
+	margin: 3px 15px 5px 0;
+}
+
+div.image.float.right {
+	float: right;
+	margin: 3px 0 5px 15px;
+}
+
+div.clearer {
+	clear: both;
+}
