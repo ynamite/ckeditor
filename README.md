@@ -6,7 +6,7 @@ Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.3.2 Standard
+* CKEditor 4.4.3 Standard
 * REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
 * CKEditor Einstellungen werden im Modul direkt vorgenommen
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
@@ -18,7 +18,7 @@ Features
 CKEditor Plugins
 ----------------
 
-* Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, Show Table Borders, rex_help
+* Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, (Show Table Borders), rex_help
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
 * Modifiziert: Image2, Link, Table
 
