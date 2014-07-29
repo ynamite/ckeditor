@@ -17,9 +17,14 @@
 
 /* -------------------------------------------------- */
 
-div.rex-form div.rex-form-row p .cke, /* metainfos */
+div.rex-form div.rex-form-row p .cke { /* metainfos */
+    display: inline-block !important;
+}
+
 .xform p .cke { /* xform */
     display: inline-block !important;
+	float: right !important;
+    width: 100% !important;
 }
 
 .ckeditor {
