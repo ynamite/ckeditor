@@ -64,5 +64,10 @@ if (!is_writable($configFile)) {
 	</div>
 </div>
 
+<style type="text/css">
+#rex-page-ckeditor .rex-addon-output input[type='checkbox'] {
+	width: auto;
+}
+</style>
 
 
