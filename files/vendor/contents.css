@@ -7,7 +7,7 @@ body
 {
 	/* Font */
 	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-	font-size: 12px;
+	font-size: 13px;
 
 	/* Text color */
 	color: #333;
@@ -131,4 +131,10 @@ a > img {
 	margin: 1px;
 	border: none;
 	outline: 1px solid #0782C1;
+}
+
+/* ------------------------------------------------ */
+
+p img {
+	margin: 0 5px 5px 0;
 }
