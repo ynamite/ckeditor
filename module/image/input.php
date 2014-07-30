@@ -1,15 +1,7 @@
 <?php
 // module: ckeditor_image_in
 
-// REQUIRED ADDONS / PLUGINS
-// * ckeditor
-// * be_utilities > jquery_ui
-// 
-// OPTIONAL ADDONS / PLUGINS
-// * seo42
-// * magnific popup
-
-// THE IMAGETYPES FOR THIS MODULE
+// imagetypes for this module
 $imageTypes = array('rex_mediapool_detail');
 
 // get image title for hint "set title in mediapool"
