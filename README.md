@@ -27,8 +27,8 @@ CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
 
 Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen (geht auch in Modulen). Möchte man eine spezielle Konfiguration so muss man per `CKEDITOR.replace` (s.u.) vorgehen.
 
-Mehrere Editoren mit unterschiedler Konfiguration
--------------------------------------------------
+Mehrere Editoren mit unterschiedlicher Konfiguration
+----------------------------------------------------
 
 ```html
 <textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
