@@ -165,6 +165,7 @@ Hinweise
 
 * Getestet mit REDAXO 4.5
 * AddOn-Ordner lautet: `ckeditor`
+* Bei einem Update des Addons sollte nach der Reinstallation der Browsercache gelöscht werden.
 * Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
 
 Changelog
