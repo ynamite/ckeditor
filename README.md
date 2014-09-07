@@ -151,6 +151,11 @@ CKEditor Toolbar Buttons
 * UIColor, Maximize, ShowBlocks
 * About
 
+Update
+------
+
+Bei einem Update des Addons sollte nach der Reinstallation immer der Browser-Cache komplett gelöscht werden!
+
 Links
 -----
 

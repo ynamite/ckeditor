@@ -1,6 +1,11 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 2.4.0 DEV
+
+* Fixed #19: Das deaktivieren der Smart Strip Einstellung führte dazu das Linkmap und Co. nicht mehr verfügbar waren im Editor, thx@krugar
+* Hinweis zum Addon-Update in die Readme aufgenommen: Bei einem Update des Addons sollte nach der Reinstallation immer der Browser-Cache komplett gelöscht werden!
+
 ### Version 2.3.0 - 29. Juli 2014
 
 * Update auf CKEditor 4.4.3
