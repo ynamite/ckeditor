@@ -53,8 +53,8 @@ if (!function_exists('rex_getImageTypeDescription')) {
 
 			<h2>Ausrichtung:</h2>
 			<select name="VALUE[7]" id="alignment">
-				<option value="image float left" <?php if ('REX_VALUE[7]' == 'image float left') echo 'selected'; ?>>links vom Text</option>
-				<option value="image float right" <?php if ('REX_VALUE[7]' == 'image float right') echo 'selected'; ?>>rechts vom Text</option>
+				<option value="float-left" <?php if ('REX_VALUE[7]' == 'float-left') echo 'selected'; ?>>links vom Text</option>
+				<option value="float-right" <?php if ('REX_VALUE[7]' == 'float-right') echo 'selected'; ?>>rechts vom Text</option>
 			</select>
 		
 			<div class="spacer"></div>

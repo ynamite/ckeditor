@@ -25,7 +25,7 @@ if (!function_exists('rex_getImageManagerImageSize')) {
 }
 
 if (!function_exists('rex_generateImgTag')) {
-	function rex_generateImgTag($file, $divClass, $resize, $resizeImageType, $link, $linkType, $linkId, $linkExtern) {
+	function rex_generateImgTag($file, $alignment, $resize, $resizeImageType, $link, $linkType, $linkId, $linkExtern) {
 		global $REX;
 		
 		if (class_exists('seo42')) {
@@ -78,6 +78,19 @@ if (!function_exists('rex_generateImgTag')) {
 					$linkEnd = '</a>';
 					break;	
 			}
+		}
+
+		// alignment
+		switch ($alignment) {
+			case 'float-left':
+				$divClass = 'image float left';
+				break;
+			case 'float-right':
+				$divClass = 'image float right';
+				break;
+			default:
+				$divClass = '';
+				break;
 		}
 	
 		// output
