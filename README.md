@@ -163,12 +163,13 @@ Links
 * REDAXO Artikel im Frontend editieren mit dem CKEditor: http://usysto.net/blog/redaxo_frontend_edit_mit_ckeditor.php
 * Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
 * CKEditor Best Practices: http://docs.ckeditor.com/#!/guide/dev_best_practices
+* Content Filtering (ACF): http://docs.ckeditor.com/#!/guide/dev_acf
 * Durchgeführte Modifizierungen am CKEditor: https://github.com/RexDude/ckeditor/issues/15
 
 Hinweise
 --------
 
-* Getestet mit REDAXO 4.5
+* Getestet mit REDAXO 4.5, 4.6
 * AddOn-Ordner lautet: `ckeditor`
 * Bei einem Update des Addons sollte nach der Reinstallation der Browsercache gelöscht werden.
 * Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
