@@ -6,7 +6,7 @@ Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.4.3 Standard
+* CKEditor 4.4.5 Standard
 * REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
 * CKEditor Einstellungen werden im Modul direkt vorgenommen
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
@@ -14,6 +14,11 @@ Features
 * Imagedialog: Unterstützung für Mediepool-Links
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
+
+Addon Update
+------------
+
+Bei einem Update des Addons sollte nach der Reinstallation immer der Browser-Cache komplett gelöscht werden!
 
 CKEditor Plugins
 ----------------
@@ -150,11 +155,6 @@ CKEditor Toolbar Buttons
 * TextColor, BGColor
 * UIColor, Maximize, ShowBlocks
 * About
-
-Update
-------
-
-Bei einem Update des Addons sollte nach der Reinstallation immer der Browser-Cache komplett gelöscht werden!
 
 Links
 -----
