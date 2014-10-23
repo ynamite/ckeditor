@@ -16,9 +16,10 @@ ckeditor_help_chapter_readme = Readme
 ckeditor_help_chapter_changelog = Changelog
 ckeditor_help_chapter_license = Lizenz
 
-ckeditor_configfile_update = Einstellungen wurden gespeichert.
-ckeditor_configfile_nosave = Einstellungen konnten nicht gespeichert werden!
-ckeditor_configfile_nowrite = Konfigurationsdatei "{0}" ist nicht beschreibbar!
+ckeditor_config_ok = Einstellungen wurden aktualisiert.
+ckeditor_config_error = Einstellungen konnte nicht gespeichert werden!
+ckeditor_install_make_dir = Der Ordner "/redaxo/include/{0}/" kann nicht angelegt werden, überprüfen Sie die Schreibrechte oder legen Sie den Ordner von Hand an und geben ihm Schreibrechte.
+ckeditor_install_perm_dir = Der Ordner "/redaxo/include/{0}/" benötigt Schreibrechte!
 
 ckeditor_settings_smart_strip = Smart Strip<br />(entfernt leere P-Tags und multiple BR-Tags)
 ckeditor_settings_resize_grip = Resize Grip

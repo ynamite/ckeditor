@@ -1,28 +1,15 @@
 <?php
 
-$configFile = $REX['INCLUDE_PATH'] . '/addons/ckeditor/settings.inc.php';
+$page = rex_request('page', 'string');
+$subpage = rex_request('subpage', 'string');
+$func = rex_request('func', 'string');
 
-if (rex_request('func', 'string') == 'update') {
-	$smart_strip = trim(rex_request('smart_strip', 'string'));
-	$resize_grip = trim(rex_request('resize_grip', 'string'));
+// save settings
+if ($func == 'update') {
+	$settings = (array) rex_post('settings', 'array', array());
 
-	$REX['ADDON']['ckeditor']['settings']['smart_strip'] = $smart_strip;
-	$REX['ADDON']['ckeditor']['settings']['resize_grip'] = $resize_grip;
-
-	$content = '
-		$REX[\'ADDON\'][\'ckeditor\'][\'settings\'][\'smart_strip\'] = "' . $smart_strip . '";
-		$REX[\'ADDON\'][\'ckeditor\'][\'settings\'][\'resize_grip\'] = "' . $resize_grip . '";
-	';
-
-	if (rex_replace_dynamic_contents($configFile, str_replace("\t", "", $content)) !== false) {
-		echo rex_info($I18N->msg('ckeditor_configfile_update'));
-	} else {
-		echo rex_warning($I18N->msg('ckeditor_configfile_nosave'));
-	}
-}
-
-if (!is_writable($configFile)) {
-	echo rex_warning($I18N->msg('ckeditor_configfile_nowrite', $configFile));
+	rex_ckeditor_utils::replaceSettings($settings);
+	rex_ckeditor_utils::updateSettingsFile();
 }
 ?>
 
@@ -35,21 +22,23 @@ if (!is_writable($configFile)) {
 
 			<fieldset class="rex-form-col-1">
 				<div class="rex-form-wrapper">
-					<input type="hidden" name="page" value="ckeditor" />
-					<input type="hidden" name="subpage" value="<?php echo rex_request('subpage'); ?>" />
+					<input type="hidden" name="page" value="<?php echo $page; ?>" />
+					<input type="hidden" name="subpage" value="<?php echo $subpage; ?>" />
 					<input type="hidden" name="func" value="update" />
 
 					<div class="rex-form-row rex-form-element-v1">
 						<p class="rex-form-text">
 							<label for="smart_strip"><?php echo $I18N->msg('ckeditor_settings_smart_strip'); ?></label>
-							<input type="checkbox" name="smart_strip" id="smart_strip" value="1" <?php if ($REX['ADDON']['ckeditor']['settings']['smart_strip'] == 1) { echo 'checked="checked"'; } ?>>
+							<input type="hidden" name="settings[smart_strip]" value="0" />
+							<input type="checkbox" name="settings[smart_strip]" id="smart_strip" value="1" <?php if ($REX['ADDON']['ckeditor']['settings']['smart_strip'] == 1) { echo 'checked="checked"'; } ?>>
 						</p>
 					</div>
 
 					<div class="rex-form-row rex-form-element-v1">
 						<p class="rex-form-text">
 							<label for="resize_grip"><?php echo $I18N->msg('ckeditor_settings_resize_grip'); ?></label>
-							<input type="checkbox" name="resize_grip" id="resize_grip" value="1" <?php if ($REX['ADDON']['ckeditor']['settings']['resize_grip'] == 1) { echo 'checked="checked"'; } ?>>
+							<input type="hidden" name="settings[resize_grip]" value="0" />
+							<input type="checkbox" name="settings[resize_grip]" id="resize_grip" value="1" <?php if ($REX['ADDON']['ckeditor']['settings']['resize_grip'] == 1) { echo 'checked="checked"'; } ?>>
 						</p>
 					</div>
 

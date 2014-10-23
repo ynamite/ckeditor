@@ -2,7 +2,7 @@
 // init addon
 $REX['ADDON']['name']['ckeditor'] = 'CKEditor';
 $REX['ADDON']['page']['ckeditor'] = 'ckeditor';
-$REX['ADDON']['version']['ckeditor'] = '2.4.0';
+$REX['ADDON']['version']['ckeditor'] = '2.5.0 DEV';
 $REX['ADDON']['author']['ckeditor'] = "RexDude";
 $REX['ADDON']['supportpage']['ckeditor'] = 'forum.redaxo.de';
 $REX['ADDON']['perm']['ckeditor'] = 'ckeditor[]';
@@ -11,12 +11,20 @@ $REX['ADDON']['perm']['ckeditor'] = 'ckeditor[]';
 $REX['PERM'][] = 'ckeditor[]';
 
 if ($REX['REDAXO']) {
-	// includes
-	require($REX['INCLUDE_PATH'] . '/addons/ckeditor/classes/class.rex_ckeditor_utils.inc.php');
-	require($REX['INCLUDE_PATH'] . '/addons/ckeditor/settings.inc.php');
-
 	// add lang file
 	$I18N->appendFile($REX['INCLUDE_PATH'] . '/addons/ckeditor/lang/');
+
+	// includes
+	require($REX['INCLUDE_PATH'] . '/addons/ckeditor/classes/class.rex_ckeditor_utils.inc.php');
+
+	// default settings (user settings are saved in data dir!)
+	$REX['ADDON']['ckeditor']['settings'] = array(
+		'smart_strip' => true,
+		'resize_grip' => false
+	);
+
+	// overwrite default settings with user settings
+	rex_ckeditor_utils::includeSettingsFile();
 
 	// add subpages
 	$REX['ADDON']['ckeditor']['SUBPAGES'] = array(

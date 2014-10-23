@@ -1,6 +1,10 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 2.5.0 DEV
+
+* Updatefähigkeit verbessert: Einstellungen werden jetzt im Data-Ordner gespeichert
+
 ### Version 2.4.0 - 25. September 2014
 
 * Update auf CKEditor 4.4.5
