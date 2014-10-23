@@ -3,7 +3,7 @@ CKEditor AddOn - Changelog
 
 ### Version 2.5.0 DEV
 
-* Updatefähigkeit verbessert: Einstellungen werden jetzt im Data-Ordner gespeichert
+* Updatefähigkeit für REDAXO 4.6 hergestellt. Einstellungen werden jetzt im Data-Ordner gespeichert.
 
 ### Version 2.4.0 - 25. September 2014
 
