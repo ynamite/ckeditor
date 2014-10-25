@@ -13,7 +13,7 @@ class rex_ckeditor_utils {
 		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
 		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.css" />' . PHP_EOL;
 
-		if ($REX['ADDON']['ckeditor']['settings']['resize_grip']) {
+		if (!$REX['ADDON']['ckeditor']['settings']['resize_grip']) {
 			$html .= '<style type="text/css">.cke_bottom .cke_resizer { visibility: hidden !important; }</style>' . PHP_EOL;
 		}
 
