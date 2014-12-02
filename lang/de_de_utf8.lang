@@ -1,9 +1,7 @@
 ckeditor_addon_help = CKEditor für REDAXO
 
 ckeditor_start = Start
-ckeditor_lite_module = Lite Modul
-ckeditor_image_module = Image Modul
-ckeditor_standard_module = Standard Modul
+ckeditor_modules = Module
 ckeditor_settings = Einstellungen
 ckeditor_help = Hilfe
 
@@ -11,6 +9,10 @@ ckeditor_start_title = CKEditor für REDAXO
 ckeditor_start_demo = CKEditor Demo
 ckeditor_start_plugins = CKEditor Plugins
 ckeditor_start_docs = CKEditor Dokumentation
+
+ckeditor_modules_lite_module = Lite Modul
+ckeditor_modules_image_module = Image Modul
+ckeditor_modules_standard_module = Standard Modul
 
 ckeditor_help_chapter_readme = Readme
 ckeditor_help_chapter_changelog = Changelog

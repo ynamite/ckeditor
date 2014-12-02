@@ -18,7 +18,7 @@ Features
 Addon Update
 ------------
 
-Bei einem Update des Addons sollte nach der Reinstallation immer der Browser-Cache komplett gelöscht werden!
+Nach einem Update des Addons sollte zuerst eine Reinstallation durchgeführt werden. Danach bitte den Browser-Cache komplett löschen!
 
 CKEditor Plugins
 ----------------
@@ -164,7 +164,6 @@ Links
 * Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
 * CKEditor Best Practices: http://docs.ckeditor.com/#!/guide/dev_best_practices
 * Content Filtering (ACF): http://docs.ckeditor.com/#!/guide/dev_acf
-* Durchgeführte Modifizierungen am CKEditor: https://github.com/RexDude/ckeditor/issues/15
 
 Hinweise
 --------

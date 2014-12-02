@@ -36,15 +36,18 @@ a.extern,
 	margin-bottom: 7px;
 }
 
-#rex-page-ckeditor #subpage-help a.rex-active {
+#rex-page-ckeditor #subpage-help a.rex-active,
+#rex-page-ckeditor #subpage-modules a.rex-active {
     color: #14568A;
 }
 
-#rex-page-ckeditor #subpage-help div.rex-addon-content {
+#rex-page-ckeditor #subpage-help div.rex-addon-content,
+#rex-page-ckeditor #subpage-modules div.rex-addon-content {
     padding: 10px 12px;
 }
 
-#rex-page-ckeditor #subpage-help div.rex-addon-content ul {
+#rex-page-ckeditor #subpage-help div.rex-addon-content ul,
+#rex-page-ckeditor #subpage-modules div.rex-addon-content ul {
 	margin-top: 0;
 }
 
@@ -57,6 +60,20 @@ a.extern,
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 15px;
+}
+
+#rex-page-ckeditor p.headline {
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+#rex-page-ckeditor p.top-margin {
+	margin-top: 7px;
+}
+
+#rex-page-ckeditor div.rex-message .rex-info p, 
+#rex-page-ckeditor div.rex-message .rex-warning p {
+	margin: 0;
 }
 </style>
 
