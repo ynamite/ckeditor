@@ -1,7 +1,7 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 2.5.1 DEV
+### Version 2.5.1 - 03. Dezember 2014
 
 * Module auf eine eigene Seite verschoben
 
