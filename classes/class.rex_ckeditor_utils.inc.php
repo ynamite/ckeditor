@@ -63,7 +63,7 @@ class rex_ckeditor_utils {
 	}
 
 	public static function makeHeadlinePretty($md) {
-		return str_replace('CKEditor - ', '', $md);
+		return str_replace('CKEditor AddOn - ', '', $md);
 	}
 
 	public static function getSettingsFile() {
