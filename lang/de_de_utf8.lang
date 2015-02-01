@@ -16,6 +16,7 @@ ckeditor_modules_standard_module = Standard Modul
 
 ckeditor_help_chapter_readme = Readme
 ckeditor_help_chapter_changelog = Changelog
+ckeditor_help_chapter_update = Update
 ckeditor_help_chapter_license = Lizenz
 
 ckeditor_config_ok = Einstellungen wurden aktualisiert.
@@ -44,3 +45,4 @@ ckeditor_module_image_desc = Die minimale CKEditor Konfiguration inkl. Bildauswa
 ckeditor_module_standard_desc = Dieses Modul beinhaltet die Standard CKEditor Konfiguration inkl. aller extra Plugins.
 
 ckeditor_module_update_msg = Sind Sie sicher, dass Sie das bestehende Modul aktualisieren wollen?
+ckeditor_update_msg = CKEditor AddOn: Bitte beachten Sie die <a href="index.php?page=ckeditor&subpage=help&chapter=update">Update-Hinweise</a>.

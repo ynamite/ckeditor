@@ -15,11 +15,6 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
-Addon Update
-------------
-
-Nach einem Update des Addons sollte zuerst eine Reinstallation durchgeführt werden. Danach bitte den Browser-Cache komplett löschen!
-
 CKEditor Plugins
 ----------------
 
@@ -177,6 +172,11 @@ Changelog
 ---------
 
 siehe [CHANGELOG.md](CHANGELOG.md)
+
+Updatehinweise
+--------------
+
+siehe [UPDATE.md](UPDATE.md)
 
 Lizenz
 ------

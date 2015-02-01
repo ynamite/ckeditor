@@ -3,8 +3,10 @@ CKEditor AddOn - Changelog
 
 ### Version 2.6.0 - 01. Februar 2015
 
+* Update: Bitte die Hinweise in der `UPDATE.md` beachten!
 * Update auf CKEditor 4.4.7
 * Advanced Tab im Link Dialog wird beim Standard Modul per default angezeigt
+* Update Meldung (wenn Update per Installer durchgeführt) + `UPDATE.md` hinzugefügt (auch über Hilfe verfügbar)
 
 ### Version 2.5.1 - 03. Dezember 2014
 
