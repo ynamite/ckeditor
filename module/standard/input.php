@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 		format_tags: 'p;h1;h2;h3;pre',
 		removePlugins: '',
 		extraPlugins: 'rex_help',
-		removeDialogTabs: 'link:advanced',
+		removeDialogTabs: '',
 		toolbar: [
 			['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
 			['Link', 'Unlink', 'Anchor'],
