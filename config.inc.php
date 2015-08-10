@@ -2,7 +2,7 @@
 // init addon
 $REX['ADDON']['name']['ckeditor'] = 'CKEditor';
 $REX['ADDON']['page']['ckeditor'] = 'ckeditor';
-$REX['ADDON']['version']['ckeditor'] = '2.6.0';
+$REX['ADDON']['version']['ckeditor'] = '3.0.0 DEV';
 $REX['ADDON']['author']['ckeditor'] = "RexDude";
 $REX['ADDON']['supportpage']['ckeditor'] = 'forum.redaxo.de';
 $REX['ADDON']['perm']['ckeditor'] = 'ckeditor[]';

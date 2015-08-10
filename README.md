@@ -6,7 +6,7 @@ Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.4.7 Standard
+* CKEditor 4.5.2 Standard
 * REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
 * CKEditor Einstellungen werden im Modul direkt vorgenommen
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
@@ -137,6 +137,8 @@ echo strtoupper($text);
 
 CKEditor Toolbar Buttons
 ------------------------
+
+Hinweis: Mache Buttons sind nur verfügbar wenn die zugehörigen CKEditor Plugins installiert wurden.
 
 * Source, Save, NewPage, DocProps, Preview, Print, Templates, document
 * Cut, Copy, Paste, PasteText, PasteFromWord, Undo, Redo
