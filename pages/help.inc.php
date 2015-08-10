@@ -15,6 +15,7 @@ $chapterpages = array (
 	'' => array($I18N->msg('ckeditor_help_chapter_readme'), 'pages/help/readme.inc.php'),
 	'changelog' => array($I18N->msg('ckeditor_help_chapter_changelog'), 'pages/help/changelog.inc.php'),
 	'update' => array($I18N->msg('ckeditor_help_chapter_update'), 'pages/help/update.inc.php'),
+	'tools' => array($I18N->msg('ckeditor_help_chapter_tools'), 'pages/help/tools.inc.php'),
 	'license' => array($I18N->msg('ckeditor_help_chapter_license'), 'pages/help/license.inc.php'),
 );
 

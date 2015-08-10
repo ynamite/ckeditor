@@ -22,6 +22,11 @@ CKEditor Plugins
 * Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
 * Modifiziert: Image2, Link, Table
 
+CKEditor Toolbar Configurator
+-----------------------------
+
+Im Addon unter Hilfe > Tools kann man sich seine eigene Toolbar zusammenklicken und den Code dann ausgeben lassen.
+
 CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
 ------------------------------------------------------
 

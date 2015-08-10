@@ -5,6 +5,7 @@ CKEditor AddOn - Changelog
 
 * Update: Bitte die Hinweise in der `UPDATE.md` beachten!
 * Update auf CKEditor 4.5.2
+* Toolbar Configurator unter Hilfe > Tools hinzugefügt
 
 ### Version 2.6.0 - 01. Februar 2015
 
