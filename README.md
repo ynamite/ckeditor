@@ -15,6 +15,11 @@ Features
 * Vereinfachter Tabellendialog
 * Kurzhilfe für Redakteure
 
+Updatehinweise
+--------------
+
+siehe [UPDATE.md](UPDATE.md)
+
 CKEditor Plugins
 ----------------
 
@@ -179,11 +184,6 @@ Changelog
 ---------
 
 siehe [CHANGELOG.md](CHANGELOG.md)
-
-Updatehinweise
---------------
-
-siehe [UPDATE.md](UPDATE.md)
 
 Lizenz
 ------
