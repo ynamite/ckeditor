@@ -7,7 +7,7 @@ body
 {
 	/* Font */
 	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-	font-size: 13px;
+	font-size: 12px;
 
 	/* Text color */
 	color: #333;
@@ -94,8 +94,6 @@ pre
 	white-space: pre-wrap; /* CSS 2.1 */
 	word-wrap: break-word; /* IE7 */
 	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	-webkit-tab-size: 4;
 	tab-size: 4;
 }
 
@@ -132,10 +130,3 @@ a > img {
 	border: none;
 	outline: 1px solid #0782C1;
 }
-
-/* ------------------------------------------------ */
-
-p img {
-	margin: 0 5px 5px 0;
-}
-
