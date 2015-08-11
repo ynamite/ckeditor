@@ -10,11 +10,3 @@
 		</ul>
 	</div>
 </div>
-
-<style type="text/css">
-#logo {
-	text-align: center;
-	margin-top: 55px;
-	margin-bottom: 15px;
-}
-</style>

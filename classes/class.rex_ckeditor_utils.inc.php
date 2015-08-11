@@ -29,6 +29,15 @@ class rex_ckeditor_utils {
 		return $html;
 	}
 
+	public static function addBackendCSS($params) {
+		$html = PHP_EOL;
+		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
+		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/backend.css" />' . PHP_EOL;
+		$html .= '<!-- END ckeditor -->';
+
+		return str_replace('</head>', $html . '</head>', $params['subject']);
+	}
+
 	protected static function getMediaAddonDir() {
 		global $REX;
 
