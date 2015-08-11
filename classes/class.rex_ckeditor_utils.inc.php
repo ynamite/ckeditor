@@ -24,7 +24,7 @@ class rex_ckeditor_utils {
 			$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/smart_strip.js"></script>' . PHP_EOL;
 		}
 
-		$html .= '<!-- END ckeditor -->';
+		$html .= '<!-- END ckeditor -->' . PHP_EOL;
 
 		return $html;
 	}
@@ -33,7 +33,7 @@ class rex_ckeditor_utils {
 		$html = PHP_EOL;
 		$html .= '<!-- BEGIN ckeditor -->' . PHP_EOL;
 		$html .= '<link rel="stylesheet" type="text/css" href="../' . self::getMediaAddonDir() . '/ckeditor/backend.css" />' . PHP_EOL;
-		$html .= '<!-- END ckeditor -->';
+		$html .= '<!-- END ckeditor -->' . PHP_EOL;
 
 		return str_replace('</head>', $html . '</head>', $params['subject']);
 	}
