@@ -6,7 +6,7 @@ Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.5.2 Standard
+* CKEditor 4.5.7 Standard
 * REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
 * CKEditor Einstellungen werden im Modul direkt vorgenommen
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
