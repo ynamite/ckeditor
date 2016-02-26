@@ -5,6 +5,7 @@ CKEditor AddOn - Changelog
 
 * Update: Bitte die Hinweise in der `UPDATE.md` beachten!
 * Update auf CKEditor 4.5.7
+* Fixed #22: CKEditor sollte nun auch im Medienpool funktionieren
 
 ### Version 3.0.0 - 10. August 2015
 

@@ -35,7 +35,7 @@ if ($REX['REDAXO']) {
 	);
 
 	// add css/js to page header
-	if (rex_request('page') != 'mediapool' && rex_request('page') != 'linkmap') { // needed for new redaxo.js patching the link dialog etc., as outehwise insertLink() etc. is definied twice
+	if (rex_request('page') != 'linkmap') { // needed for new redaxo.js patching the link dialog etc., as outehwise insertLink() etc. is definied twice
 	   rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
 	}
 
