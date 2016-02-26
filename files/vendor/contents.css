@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 
@@ -7,7 +7,7 @@ body
 {
 	/* Font */
 	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-	font-size: 12px;
+	font-size: 13px;
 
 	/* Text color */
 	color: #333;
@@ -130,3 +130,10 @@ a > img {
 	border: none;
 	outline: 1px solid #0782C1;
 }
+
+/* ------------------------------------------------ */
+
+p img {
+	margin: 0 5px 5px 0;
+}
+
