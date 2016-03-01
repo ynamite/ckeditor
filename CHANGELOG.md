@@ -1,7 +1,7 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 3.1.0 DEV
+### Version 3.1.0 - 01. März 2016
 
 * Update: Bitte die Hinweise in der `UPDATE.md` beachten!
 * Update auf CKEditor 4.5.7
