@@ -18,7 +18,10 @@ class rex_ckeditor_utils {
 		}
 
 		$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/vendor/ckeditor.js"></script>' . PHP_EOL;
-		$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.js"></script>' . PHP_EOL;
+
+		if (rex_request('page') != 'mediapool' && rex_request('page') != 'linkmap') { // needed for new redaxo.js patching the link dialog etc., as outehwise insertLink() etc. is definied twice
+			$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/redaxo.js"></script>' . PHP_EOL;
+		}
 
 		if ($REX['ADDON']['ckeditor']['settings']['smart_strip']) {
 			$html .= '<script type="text/javascript" src="../' . self::getMediaAddonDir() . '/ckeditor/smart_strip.js"></script>' . PHP_EOL;

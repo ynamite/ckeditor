@@ -2,7 +2,7 @@
 // init addon
 $REX['ADDON']['name']['ckeditor'] = 'CKEditor';
 $REX['ADDON']['page']['ckeditor'] = 'ckeditor';
-$REX['ADDON']['version']['ckeditor'] = '3.1.0';
+$REX['ADDON']['version']['ckeditor'] = '3.1.1';
 $REX['ADDON']['author']['ckeditor'] = "RexDude";
 $REX['ADDON']['supportpage']['ckeditor'] = 'forum.redaxo.de';
 $REX['ADDON']['perm']['ckeditor'] = 'ckeditor[]';
@@ -35,9 +35,7 @@ if ($REX['REDAXO']) {
 	);
 
 	// add css/js to page header
-	if (rex_request('page') != 'linkmap') { // needed for new redaxo.js patching the link dialog etc., as outehwise insertLink() etc. is definied twice
-	   rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
-	}
+	rex_register_extension('OUTPUT_FILTER', 'rex_ckeditor_utils::addToOutputFilter'); // better loading time with output filter and avoids flickering
 
 	// add backend css for addon styles only
 	if (rex_request('page') == 'ckeditor') { 

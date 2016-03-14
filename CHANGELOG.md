@@ -1,6 +1,11 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 3.1.1 - 14. März 2016
+
+* Update: Bitte die Hinweise in der `UPDATE.md` beachten!
+* Medienpool Link-Button fixed. Bei Einbindung des CKEditors als Metainfo im Medienpool ist nur eine manuelle Linkeingabe ohne Link-Buttons möglich.
+
 ### Version 3.1.0 - 01. März 2016
 
 * Update: Bitte die Hinweise in der `UPDATE.md` beachten!
