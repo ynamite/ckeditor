@@ -1,6 +1,13 @@
 CKEditor AddOn - Changelog
 ==========================
 
+### Version 4.0.0 DEV
+
+* Portierung zu REDAXO 5
+* Update auf CKEditor 4.6.2 FULL!
+* Vereinfachter Initialisierungs-Code ohne Java Script, siehe Readme
+* Profile
+
 ### Version 3.1.1 - 14. März 2016
 
 * Update: Bitte die Hinweise in der `UPDATE.md` beachten!

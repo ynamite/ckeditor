@@ -1,51 +1,31 @@
-ckeditor_addon_help = CKEditor für REDAXO
 
-ckeditor_start = Start
-ckeditor_modules = Module
-ckeditor_settings = Einstellungen
+ckeditor_title = CKEditor
+ckeditor_main_title = CKEditor für REDAXO 5
+
+ckeditor_main = Hauptseite
+ckeditor_main_demo = CKEditor Demo
+ckeditor_main_plugins = CKEditor Add-ons
+ckeditor_main_docs = CKEditor Dokumentation
+
+ckeditor_config = Einstellungen
+ckeditor_config_save = Einstellungen speichern
+ckeditor_config_saved = Einstellungen wurden gespeichert!
+
+ckeditor_profiles = Profile
+ckeditor_profiles_norowsmessage = Es wurden keine Profile gefunden
+ckeditor_profiles_column_name = Name
+ckeditor_profiles_column_description = Beschreibung
+ckeditor_profiles_formcaption_add = Profil hinzufügen
+ckeditor_profiles_formcaption_edit = Profil editieren
+ckeditor_profiles_label_name = Name
+ckeditor_profiles_label_description = Beschreibung
+ckeditor_profiles_label_jscode = JavaScript Config Objekt
+
+ckeditor_module = Modul
 ckeditor_help = Hilfe
 
-ckeditor_start_title = CKEditor für REDAXO
-ckeditor_start_demo = CKEditor Demo
-ckeditor_start_plugins = CKEditor Plugins
-ckeditor_start_docs = CKEditor Dokumentation
-
-ckeditor_modules_lite_module = Lite Modul
-ckeditor_modules_image_module = Image Modul
-ckeditor_modules_standard_module = Standard Modul
-
-ckeditor_help_chapter_readme = Readme
-ckeditor_help_chapter_changelog = Changelog
-ckeditor_help_chapter_update = Update
-ckeditor_help_chapter_tools = Tools
-ckeditor_help_chapter_license = Lizenz
-
-ckeditor_config_ok = Einstellungen wurden aktualisiert.
-ckeditor_config_error = Einstellungen konnte nicht gespeichert werden!
-ckeditor_install_make_dir = Der Ordner "/redaxo/include/{0}/" kann nicht angelegt werden, überprüfen Sie die Schreibrechte oder legen Sie den Ordner von Hand an und geben ihm Schreibrechte.
-ckeditor_install_perm_dir = Der Ordner "/redaxo/include/{0}/" benötigt Schreibrechte!
-
-ckeditor_settings_smart_strip = Smart Strip<br />(entfernt leere P-Tags und multiple BR-Tags)
-ckeditor_settings_resize_grip = Resize Grip
-ckeditor_settings_save = Einstellungen speichern
+ckeditor_config_smart_strip = Smart Strip (entfernt leere P-Tags und multiple BR-Tags)
 
 ckeditor_module_input = Eingabe
 ckeditor_module_output = Ausgabe
-ckeditor_module_css = CSS
 
-ckeditor_module_name_lite = Texteditor (CKEditor Lite)
-ckeditor_module_name_image = Texteditor + Bild (CKEditor Lite)
-ckeditor_module_name_standard = Texteditor (CKEditor Standard)
-
-ckeditor_module_added = Modul "{0}" wurde angelegt
-ckeditor_module_update = Bestehendes Modul aktualisieren
-ckeditor_module_install = Modul jetzt automatisch installieren
-
-ckeditor_module_lite_desc = Dieses Modul beinhaltet eine minimale CKEditor Konfiguration. <br />Bilder sollten extra z.B. per REX_MEDIA_BUTTON hinzugefügt werden (wenn benötigt).
-ckeditor_module_image_desc = Die minimale CKEditor Konfiguration inkl. Bildauswahl über ein REX_MEDIA_BUTTON. <br /><ul><li>Benötigt: <a target="_blank" href="http://www.redaxo.org/de/download/addons/?addon_id=1096" class="extern">Backend Utilities</a> &nbsp;jQuery UI Plugin</li><li>Benötigt: CSS Anweisungen unten, die in das Stylesheet der Website (Frontend) kopiert werden müssen</li><li>Unterstütze Addons: <a target="_blank" href="http://www.redaxo.org/de/download/addons/?addon_id=1060" class="extern">SEO42</a> Addon, <a target="_blank" href="http://www.redaxo.org/de/download/addons/?addon_id=1131" class="extern">Magnific Popup</a> Addon</li><li>Bildtypen werden in das <code>$imageTypes</code> Array in die Modul Eingabe gepackt</li><li>Lightbox Links bekommen <code>.lightbox</code> sowie <code>.magnific-popup-image</code> CSS-Klasse</li><li>Alt-Attribut der Bilder wird aus dem Medienpool-Metafeld <code>med_title</code> geholt</li><li>Title-Attribut der Lightbox-Links wird aus dem Medienpool-Metafeld <code>med_description</code> geholt</li></ul>
-ckeditor_module_standard_desc = Dieses Modul beinhaltet die Standard CKEditor Konfiguration inkl. aller extra Plugins.
-
-ckeditor_module_update_msg = Sind Sie sicher, dass Sie das bestehende Modul aktualisieren wollen?
-ckeditor_update_msg = CKEditor AddOn: Bitte beachten Sie die <a href="index.php?page=ckeditor&subpage=help&chapter=update">Update-Hinweise</a>.
-
-ckeditor_toolbar_configurator = Toolbar Configurator

@@ -1,0 +1,15 @@
+package: ckeditor 
+version: '4.0.0-dev'
+author: RexDude
+supportpage: https://github.com/RexDude/ckeditor
+load: late
+page:
+    title: 'translate:title'
+    perm: admin[]
+    icon: rex-icon fa-pencil
+    subpages:
+        main: { title: 'translate:main' }
+        profiles: { title: 'translate:profiles' }
+        module: { title: 'translate:module' }
+        config: { title: 'translate:config' } 
+        help: { title: 'translate:help' }

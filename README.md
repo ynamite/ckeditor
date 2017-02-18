@@ -1,4 +1,4 @@
-CKEditor AddOn für REDAXO 4
+CKEditor AddOn für REDAXO 5
 ===========================
 
 Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
@@ -6,130 +6,119 @@ Der [CKEditor](http://ckeditor.com/) für REDAXO inkl. eines Beispielmoduls.
 Features
 --------
 
-* CKEditor 4.5.7 Standard
-* REDAXO Lite Modul mit einer minimalen Konfiguration, sowie Standard Modul
-* CKEditor Einstellungen werden im Modul direkt vorgenommen
+* CKEditor Full
+* REDAXO Modul
+* Editor Profile
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
 * Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
-* Imagedialog: Unterstützung für Mediepool-Links
 * Vereinfachter Tabellendialog
-* Kurzhilfe für Redakteure
+* Kurzhilfe für REDAXO Redakteure
 
-Updatehinweise
---------------
-
-siehe [UPDATE.md](UPDATE.md)
-
-CKEditor Plugins
+Missing Features
 ----------------
 
-* Hinzugefügt: Color Button, Div Container Manager, Enhanced Image, Justify, (Show Table Borders), rex_help
-* Entfernt: About CKEditor, Accessibility Help, Image, SpellCheckAsYouType (SCAYT), WebSpellChecker
-* Modifiziert: Image2, Link, Table
+* Der Mediabutton für das CKEditor Image Plugin wird aktuell nicht unterstützt. `Image` sollte daher aus der Toolbar entfernt werden. Bilder können von "aussen" über das REDAXO Modul eingebunden werden.
 
-CKEditor Toolbar Configurator
------------------------------
-
-Im Addon unter Hilfe > Tools kann man sich seine eigene Toolbar zusammenklicken und den Code dann ausgeben lassen.
-
-CKEditor in AddOns wie XForm, MetaInfos etc. einsetzen
-------------------------------------------------------
-
-Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen (geht auch in Modulen). Möchte man eine spezielle Konfiguration so muss man per `CKEDITOR.replace` (s.u.) vorgehen.
-
-Mehrere Editoren mit unterschiedlicher Konfiguration
-----------------------------------------------------
+CKEditor in Modulen einsetzen
+------------------------------
 
 ```html
-<textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
-<textarea id="ckeditor2" name="VALUE[2]" style="display: none;">REX_VALUE[2]</textarea>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	CKEDITOR.replace('ckeditor1', {
-		height: 200,
-		// ...
-	});
-
-	CKEDITOR.replace('ckeditor2', {
-		height: 400,
-		// ...
-	});
-});
-</script>
+<textarea class="ckeditor" data-ckeditor-profile="default" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>
 ```
 
-Mehrere Editoren mit gleicher Konfiguration
--------------------------------------------
+* Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. 
+* Desweiteren regelt man über `data-ckeditor-profile` das zu ladende Profil. 
+* Wenn nötig kann man über `data-ckeditor-height` die Höhe überschreiben (wird sonst aus dem Profil genommen).
 
-```html
-<textarea id="ckeditor1" class="editors" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea><br />
-<textarea id="ckeditor2" class="editors" name="VALUE[2]" style="display: none;">REX_VALUE[2]</textarea>
+CKEditor in den Metainfos etc. einsetzen
+----------------------------------------
 
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	$('.editors').each(function() {
-		var id = $(this).attr('id');
+* In dem Feldattribute-Feld: `class="ckeditor" data-ckeditor-profile="default"`
+* Optional ebenfalls möglich: `data-ckeditor-height="150"`
 
-		CKEDITOR.replace(id, {
-			height: 400,
-			// ...
-		});
-	});
-});
-</script>
+CKEditor Standard Profil
+------------------------
+
+Hinweis: Der Mediabutton für das CKEditor Image Plugin wird aktuell nicht unterstützt. `Image` sollte daher aus der Toolbar entfernt werden. Bilder können von "aussen" über das REDAXO Modul eingebunden werden.
+
 ```
-
+{
+    height: 400,
+    fillEmptyBlocks: false,
+    forcePasteAsPlainText: false,
+    entities: false,
+    linkShowTargetTab: true,
+    format_tags: 'p;h1;h2;h3;pre',
+    removePlugins: '',
+    extraPlugins: 'rex_help',
+    removeDialogTabs: '',
+    disallowedContent: 'table{width,height}[align,border,cellpadding,cellspacing,summary];caption;',
+    toolbar: [
+        ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
+        ['Link', 'Unlink', 'Anchor'],
+        ['Image', 'Table', 'Seperator', 'HorizontalRule', 'SpecialChar'],
+        ['TextColor', 'BGColor'],
+        ['CreateDiv'],
+        ['Maximize'],
+        ['Source'],
+        ['rex_help'],
+        '/',
+        ['Format', 'Styles'],
+        ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+        ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+        ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
+        // no comma after last entry!!!
+    ]
+    // no comma after last entry!!!
+}
+```
 
 Custom Styles hinzufügen
 ------------------------
 
-Das Modul (hier das Lite Modul) muss wie folgt ergänzt werden:
+Das Profil muss wie folgt ergänzt werden:
 
-* Die Styles Combobox zur Toolbar hinzufügen
-* Custom CSS per `contentsCss` für den Editor hinzufügen (als extra CSS-Datei oder die Styles direkt angeben, s.u.)
-* Bestehendes StyleSet (definiert in `/files/addons/ckeditor/vendor/styles.js`) ersetzen
+* Die __Styles__ Combobox zur Toolbar hinzufügen
+* __stylesSet__ definieren, ersetzt das Besetehende das definiert ist in `/assets/addons/ckeditor/vendor/styles.js`
+* Custom CSS per __contentsCss__ für den Editor hinzufügen
 
-```html
-<textarea id="ckeditor1" name="VALUE[1]" style="display: none;">REX_VALUE[1]</textarea>
+Hier ein Lite Profil mit Custom Styles:
 
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-	CKEDITOR.replace('ckeditor1', {
-		height: 400,
-		fillEmptyBlocks: false,
-		forcePasteAsPlainText: true,
-		entities: false,
-		linkShowTargetTab: false,
-		format_tags: 'p;h2;h3',
-		removePlugins: 'elementspath,image2',
-		extraPlugins: 'rex_help',
-		removeDialogTabs: 'link:advanced',
-		toolbar: [
-			['Format', 'Styles'],
-			['Bold', 'Italic'],
-			['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
-			['Link', 'Unlink', 'Anchor'],
-			['Table'],
-			['PasteText', 'PasteFromWord'],
-			['rex_help']
-			// no comma after last entry!!!
-		],
-		contentsCss: [CKEDITOR.basePath + 'contents.css', 
-			'.green { background: lightgrey; color: green; }' +
-			'.blue { background: lightgrey; color: blue; }'
-			// no plus after last entry!!!
-		]
-		// no comma after last entry!!!
-	});
-
-	CKEDITOR.stylesSet.add('default', [
-		{ name: 'Grün', element: 'span', attributes: { 'class': 'green' } },
-		{ name: 'Blau', element: 'span', attributes: { 'class': 'blue' } }
-		// no comma after last entry!!!
-	]);
-});
-</script>
+```
+{
+    height: 400,
+    fillEmptyBlocks: false,
+    forcePasteAsPlainText: true,
+    entities: false,
+    linkShowTargetTab: false,
+    format_tags: 'p;h2;h3',
+    removePlugins: 'elementspath',
+    extraPlugins: 'rex_help',
+    removeDialogTabs: 'link:advanced',
+    disallowedContent: 'table{width,height}[align,border,cellpadding,cellspacing,summary];caption;',
+    toolbar: [
+        ['Format', 'Styles'],
+        ['Bold', 'Italic'],
+        ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+        ['Link', 'Unlink', 'Anchor'],
+        ['Table'],
+        ['PasteText', 'PasteFromWord'],
+        ['Maximize'],
+        ['rex_help']
+        // no comma after last entry!!!
+    ],
+    stylesSet: [
+        { name: 'Grün', element: 'span', attributes: { 'class': 'green' } },
+        { name: 'Blau', element: 'span', attributes: { 'class': 'blue' } }
+        // no comma after last entry!!!
+    ],    
+    contentsCss: [CKEDITOR.basePath + 'contents.css', 
+        '.green { background: lightgrey; color: green; }' +
+        '.blue { background: lightgrey; color: blue; }'
+        // no plus after last entry!!!
+    ]
+    // no comma after last entry!!!
+}
 ```
 
 Ausgabe nachträglich manipulieren
@@ -138,7 +127,7 @@ Ausgabe nachträglich manipulieren
 ```php
 <?php
 $text = <<< EOT
-REX_HTML_VALUE[1]
+REX_VALUE[id=1 output=html]
 EOT;
 
 echo strtoupper($text);
@@ -163,6 +152,11 @@ Hinweis: Mache Buttons sind nur verfügbar wenn die zugehörigen CKEditor Plugin
 * UIColor, Maximize, ShowBlocks
 * About
 
+CKEditor Toolbar Configurator
+-----------------------------
+
+Es liegt ein Toolbar Konfigurator im Assets-Vrzeichnis.
+
 Links
 -----
 
@@ -175,27 +169,25 @@ Links
 Hinweise
 --------
 
-* Getestet mit REDAXO 4.5, 4.6
+* Getestet mit REDAXO 5.2
 * AddOn-Ordner lautet: `ckeditor`
 * Bei einem Update des Addons sollte nach der Reinstallation der Browsercache gelöscht werden.
-* Email-Adressen erscheinen im Klartext im Quellcode. Es wird deshalb so ein Tool wie der [Email Obfuscator](https://github.com/RexDude/email_obfuscator) empfohlen um die Email-Adressen vor Spambots zu schützen.
 
 Changelog
 ---------
 
-siehe [CHANGELOG.md](CHANGELOG.md)
+siehe `/ckeditor/CHANGELOG.md`
 
 Lizenz
 ------
 
-* CKEditor: siehe `/ckeditor/files/vendor/LICENSE.md`
-* CKEditor REDAXO AddOn: [LICENSE.md](LICENSE.md)
+* CKEditor: siehe `/ckeditor/assets/vendor/LICENSE.md`
+* CKEditor REDAXO AddOn: MIT, siehe `/ckeditor/LICENSE.md`
 
 Credits
 -------
 
 * [CKEditor](http://ckeditor.com/)
-* [Parsedown](http://parsedown.org/) Class by Emanuil Rusev
 * [Xong](https://github.com/xong) für die RegEx-Hilfe
 * [webghost](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config und und und... ;)
 
