@@ -36,6 +36,12 @@ CKEditor in den Metainfos etc. einsetzen
 * In dem Feldattribute-Feld: `class="ckeditor" data-ckeditor-profile="default"`
 * Optional ebenfalls möglich: `data-ckeditor-height="150"`
 
+CKEditor in yForm einsetzen
+----------------------------------------
+* Im Individuelle Attribute-Feld: `{"class":"ckeditor","data-ckeditor-profile":"default"}`
+* Weitere Attribute kommagetrennt möglich.
+ 
+
 CKEditor Standard Profil
 ------------------------
 
