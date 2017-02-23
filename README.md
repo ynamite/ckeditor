@@ -19,9 +19,9 @@ Features
 Eigene Plugins benutzen
 -----------------------
 
-Eigene Plugins werden einfach in dass project Addon dort unter `/install/ckeditor/plugins/` gelegt. Diese werden automatisch in das CKEditor Plugin Verzeichnis kopiert und stehen so immer zur Verfügung auch nach einem AddOn-Update. Im Profil muss man dann noch unter `extraPlugins` das Plugin mit auflisten (durch Komma getrennt wenn mehrere). 
+Eigene Plugins werden einfach in dass project Addon dort unter `/install/ckeditor/plugins/` gelegt. Diese werden automatisch in das CKEditor Plugin Verzeichnis kopiert bei Install, Reinstall und Update des CKEditor AddOns und stehen so immer zur Verfügung. Im Profil muss man dann noch unter `extraPlugins` das Plugin mit auflisten (durch Komma getrennt wenn mehrere). Alles weitere sollte man der Doku des Plugins entnehmen... ;) 
 
-Bitte beachten: Sollten nach einem Update die eigene Plugins nicht kompatibel sein mit der neusten CKEditor Version kann der Editor unter Umständen nicht mehr geladen werden. Abhilft schafft hier die betreffenden Plugins aus dem project AddOn zu entfernen und dass CKEditor AddOn zu reinstallieren.
+Bitte beachten: Sollten nach einem Update die eigene Plugins nicht kompatibel sein mit der neusten CKEditor Version kann der Editor unter Umständen nicht mehr geladen werden. Abhilft schafft hier die betreffenden Plugins im Profil unter `extraPlugins` zu entfernen.
 
 CKEditor in Modulen einsetzen
 ------------------------------
