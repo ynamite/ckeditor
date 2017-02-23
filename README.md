@@ -149,6 +149,7 @@ Bilder als Media Manager Urls umschreiben
 -----------------------------------------
 
 ```php
+<?php
 echo rex_ckeditor::replaceImageTags($html, 'my_media_type');
 ?>
 ```
