@@ -5,6 +5,10 @@
 	margin-bottom: 25px;
 }
 
+#rex-page-ckeditor-main #logo img {
+	display: inline-block;
+}
+
 .ckeditor {
 	display: none;
 }

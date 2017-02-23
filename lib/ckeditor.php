@@ -38,10 +38,10 @@ class rex_ckeditor {
 			if (method_exists('rexx','getMediaManagerFile')) {
 				$src = rexx::getMediaManagerFile($mediaFile, $mediaType);
 			} else {
-				$src = '/index.php?rex_media_type=' . $mediaType . '&rex_media_file=' . $mediaFile;
+				$src = '/index.php?rex_media_type=' . $mediaType . '&amp;rex_media_file=' . $mediaFile;
 			}
 
-			return $matches[1] . htmlspecialchars($src);
+			return $matches[1] . $src;
 		}, $html);
 	}
 }

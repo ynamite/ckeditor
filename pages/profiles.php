@@ -2,7 +2,7 @@
 	$func = rex_request('func', 'string');
 	
 	if ($func == '') {
-		$list = rex_list::factory("SELECT `id`, `name`, `description` FROM `".rex::getTablePrefix()."ckeditor_profiles` ORDER BY `name` ASC");
+		$list = rex_list::factory("SELECT `id`, `name`, `description` FROM `".rex::getTablePrefix()."ckeditor_profiles` ORDER BY `id` ASC");
 		$list->addTableAttribute('class', 'table-striped');
 		$list->setNoRowsMessage($this->i18n('profiles_norowsmessage'));
 		

@@ -1,7 +1,7 @@
 <?php
 
 $content = '
-<p id="logo"><a target="_blank" href="http://ckeditor.com"><img src="' . $this->getAssetsUrl('logo.png') . '" width="340" height="116" alt="" /></a></p>
+<p id="logo"><a target="_blank" href="http://ckeditor.com"><img class="img-responsive" src="' . $this->getAssetsUrl('logo.png') . '" width="340" height="116" alt="" /></a></p>
 <br />
 <ul>
 	<li><a class="extern" target="_blank" href="http://ckeditor.com/">' . rex_i18n::msg('ckeditor_main_demo') . ' <i class="fa fa-external-link"></i></a></li>

@@ -12,14 +12,14 @@ Features
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
 * Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
 * Imagedialog: Unterstützung für Links über REDAXO Medienpool
-* Vereinfachter Tabellendialog
+* Vereinfachter Tabellen- und Imagedialog
 * Kurzhilfe für REDAXO Redakteure
 
 CKEditor in Modulen einsetzen
 ------------------------------
 
 ```html
-<textarea class="ckeditor" data-ckeditor-profile="default" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>
+<textarea class="ckeditor" data-ckeditor-profile="lite" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>
 ```
 
 * Die Textarea muss lediglich die CSS-Klasse `ckeditor` zugewiesen bekommen. 
@@ -29,13 +29,13 @@ CKEditor in Modulen einsetzen
 CKEditor in den Metainfos einsetzen
 ------------------------------------
 
-* In dem Feldattribute-Feld: `class="ckeditor" data-ckeditor-profile="default"`
+* In dem Feldattribute-Feld: `class="ckeditor" data-ckeditor-profile="lite"`
 * Optional ebenfalls möglich: `data-ckeditor-height="150"`
 
 CKEditor in yForm einsetzen
 ---------------------------
 
-* Im Individuelle Attribute-Feld: `{"class":"ckeditor","data-ckeditor-profile":"default"}`
+* Im Individuelle Attribute-Feld: `{ "class" : "ckeditor", "data-ckeditor-profile" : "lite" }`
 * Weitere Attribute kommagetrennt möglich.
 
 CKEditor in MForm einsetzen
@@ -45,43 +45,8 @@ CKEditor in MForm einsetzen
 $mform->addTextareaField(1); 
 $mform->setLabel('Text');
 $mform->addAttribute('class', 'ckeditor');
-$mform->addAttribute('data-ckeditor-profile', 'default');
+$mform->addAttribute('data-ckeditor-profile', 'lite');
 $mform->addAttribute('data-ckeditor-height', '200'); // optional
-```
-
-CKEditor Standard Profil
-------------------------
-
-```javascript
-{
-    height: 400,
-    fillEmptyBlocks: false,
-    forcePasteAsPlainText: false,
-    entities: false,
-    linkShowTargetTab: true,
-    format_tags: 'p;h1;h2;h3;pre',
-    removePlugins: '',
-    extraPlugins: 'rex_help',
-    removeDialogTabs: '',
-    disallowedContent: 'table{width,height}[align,border,cellpadding,cellspacing,summary];caption;',
-    toolbar: [
-        ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
-        ['Link', 'Unlink', 'Anchor'],
-        ['Image', 'Table', 'Seperator', 'HorizontalRule', 'SpecialChar'],
-        ['TextColor', 'BGColor'],
-        ['CreateDiv'],
-        ['Maximize'],
-        ['Source'],
-        ['rex_help'],
-        '/',
-        ['Format', 'Styles'],
-        ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
-        ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-        ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote']
-        // no comma after last entry!!!
-    ]
-    // no comma after last entry!!!
-}
 ```
 
 Custom Styles hinzufügen
@@ -172,14 +137,10 @@ Hinweis: Mache Buttons sind nur verfügbar wenn die zugehörigen CKEditor Plugin
 * UIColor, Maximize, ShowBlocks
 * About
 
-CKEditor Toolbar Configurator
------------------------------
-
-Es liegt ein Toolbar Konfigurator im Assets-Vrzeichnis.
-
 Links
 -----
 
+* CKEditor Toolbar Configurator: http://nightly.ckeditor.com/17-02-23-07-09/standard/samples/toolbarconfigurator/index.html
 * CKEditor Addon für REDAXO konfigurieren: http://usysto.net/blog/redaxo_ckeditor_addon.php
 * REDAXO Artikel im Frontend editieren mit dem CKEditor: http://usysto.net/blog/redaxo_frontend_edit_mit_ckeditor.php
 * Alle CKEditor Config-Optionen: http://docs.ckeditor.com/#!/api/CKEDITOR.config
@@ -189,9 +150,8 @@ Links
 Hinweise
 --------
 
-* Getestet mit REDAXO 5.2
+* Getestet mit REDAXO 5.2, 5.3
 * AddOn-Ordner lautet: `ckeditor`
-* Bei einem Update des Addons sollte nach der Reinstallation der Browsercache gelöscht werden.
 
 Changelog
 ---------
@@ -207,8 +167,5 @@ Lizenz
 Credits
 -------
 
-* CKEditor
-* Xong für die RegEx-Hilfe
-* webghost für die investigative Arbeit mit der CKEditor Config und und und... ;)
-* phoebusryan für Code aus dem Markitup Addon
+* CKSource, Xong, webghostx, phoebusryan
 
