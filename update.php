@@ -6,5 +6,5 @@ rex_dir::deleteFiles($this->getAssetsPath(), true);
 // copy assets
 rex_dir::copy($this->getPath('assets'), $this->getAssetsPath());
 
-// apply patches
-rex_ckeditor::applyPatches();
+// to apply patches...
+$this->setConfig('patches_applied', 0);

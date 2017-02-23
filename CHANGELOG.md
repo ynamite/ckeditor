@@ -7,7 +7,8 @@ CKEditor AddOn - Changelog
 * Update auf CKEditor 4.6.2 FULL!
 * Vereinfachter Initialisierungs-Code ohne JavaScript, siehe Readme
 * Neuer Readme Eintrag: Bilder als Media Manager Urls umschreiben
-* Profile
+* Extra Plugins Mechanismus eingebaut, siehe Readme
+* Editor Profile
 
 ### Version 3.1.1 - 14. März 2016
 

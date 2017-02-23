@@ -29,6 +29,13 @@ class rex_ckeditor {
 
 		// copy extra plugins
 		rex_dir::copy(rex_path::addon('ckeditor', 'install/plugins'), rex_path::addonAssets('ckeditor', 'vendor/plugins'));
+
+		// copy extra plugins from project addon
+		$extraPluginsPath = rex_path::addon('project', 'install/ckeditor/plugins');
+
+		if (file_exists($extraPluginsPath)) {
+			rex_dir::copy($extraPluginsPath, rex_path::addonAssets('ckeditor', 'vendor/plugins'));
+		}
 	}
 
 	public static function replaceImageTags($html, $mediaType) {

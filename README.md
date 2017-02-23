@@ -9,11 +9,19 @@ Features
 * CKEditor Full
 * REDAXO Modul
 * Editor Profile
+* Eigene Plugins benutzen
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
 * Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
 * Imagedialog: Unterstützung für Links über REDAXO Medienpool
 * Vereinfachter Tabellen- und Imagedialog
 * Kurzhilfe für REDAXO Redakteure
+
+Eigene Plugins benutzen
+-----------------------
+
+Eigene Plugins werden einfach in dass project Addon dort unter `/install/ckeditor/plugins/` gelegt. Diese werden automatisch in das CKEditor Plugin Verzeichnis kopiert und stehen so immer zur Verfügung auch nach einem AddOn-Update. Im Profil muss man dann noch unter `extraPlugins` das Plugin mit auflisten (durch Komma getrennt wenn mehrere). 
+
+Bitte beachten: Sollten nach einem Update die eigene Plugins nicht kompatibel sein mit der neusten CKEditor Version kann der Editor unter Umständen nicht mehr geladen werden. Abhilft schafft hier die betreffenden Plugins aus dem project AddOn zu entfernen und dass CKEditor AddOn zu reinstallieren.
 
 CKEditor in Modulen einsetzen
 ------------------------------

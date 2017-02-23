@@ -4,8 +4,7 @@ if (!$this->hasConfig('smart_strip')) {
     $this->setConfig('smart_strip', 1);
 }
 
-if (!$this->hasConfig('patches_applied')) {
-    $this->setConfig('patches_applied', 0);
-}
+// to apply patches...
+$this->setConfig('patches_applied', 0);
 
 
