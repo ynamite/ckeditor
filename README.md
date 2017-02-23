@@ -176,5 +176,5 @@ Lizenz
 Credits
 -------
 
-* CKSource, Xong, webghostx, phoebusryan
+* CKSource, Xong, webghostx, phoebusryan, skerbis, georgkaser, fietstouring
 
