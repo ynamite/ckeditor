@@ -52,7 +52,7 @@ $mform->addAttribute('data-ckeditor-height', '200'); // optional
 CKEditor Standard Profil
 ------------------------
 
-```
+```javascript
 {
     height: 400,
     fillEmptyBlocks: false,
@@ -95,7 +95,7 @@ Das Profil muss wie folgt ergänzt werden:
 
 Hier ein Lite Profil mit Custom Styles:
 
-```
+```javascript
 {
     height: 400,
     fillEmptyBlocks: false,
