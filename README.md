@@ -11,13 +11,9 @@ Features
 * Editor Profile
 * Smart Strip Funktion: filtert leere P's und mehrfach vorkommende BR's heraus
 * Linkdialog: Unterstützung für Links über REDAXO Linkmap und Medienpool
+* Imagedialog: Unterstützung für Links über REDAXO Medienpool
 * Vereinfachter Tabellendialog
 * Kurzhilfe für REDAXO Redakteure
-
-Missing Features
-----------------
-
-* Der Mediabutton für das CKEditor Image Plugin wird aktuell nicht unterstützt. `Image` sollte daher aus der Toolbar entfernt werden. Bilder können von "aussen" über das REDAXO Modul eingebunden werden.
 
 CKEditor in Modulen einsetzen
 ------------------------------
@@ -44,8 +40,6 @@ CKEditor in yForm einsetzen
 
 CKEditor Standard Profil
 ------------------------
-
-Hinweis: Der Mediabutton für das CKEditor Image Plugin wird aktuell nicht unterstützt. `Image` sollte daher aus der Toolbar entfernt werden. Bilder können von "aussen" über das REDAXO Modul eingebunden werden.
 
 ```
 {
@@ -182,13 +176,13 @@ Hinweise
 Changelog
 ---------
 
-siehe `/ckeditor/CHANGELOG.md`
+siehe `CHANGELOG.md` des AddOns
 
 Lizenz
 ------
 
-* CKEditor: siehe `/ckeditor/assets/vendor/LICENSE.md`
-* CKEditor REDAXO AddOn: MIT, siehe `/ckeditor/LICENSE.md`
+* CKEditor AddOn: MIT-Lizenz, siehe `LICENSE.md` des AddOns
+* CKEditor: siehe `LICENSE.md` des CKEditors
 
 Credits
 -------

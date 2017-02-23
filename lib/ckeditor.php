@@ -20,6 +20,10 @@ class rex_ckeditor {
 		$jsFile = rex_path::addonAssets('ckeditor', 'vendor/ckeditor.js');
 		$ckjs = file_get_contents($jsFile);
 		//$ckjs = str_replace('a.push("html{cursor:text;*cursor:auto}");', 'a.push("html{cursor:text;*cursor:auto}body{font-family: sans-serif, Arial, Verdana;font-size:13px !important;color: #333;background-color: #fff;margin: 20px;line-height: 1.6em;}a{color: #0782C1;font-weight:normal;}ol,ul,dl {*margin-right: 0px; padding: 0 40px; }h1,h2,h3,h4,h5,h6 { font-weight: normal; line-height: 1.2em;}");', $ckjs);
+
+		// margin for images
+		$buffer = 'img{margin:10px;}' . $buffer;
+
 		$ckjs = str_replace('a.push("html{cursor:text;*cursor:auto}");', 'a.push("html{cursor:text;*cursor:auto}' . $buffer . '");', $ckjs);
 		file_put_contents($jsFile, $ckjs);
 

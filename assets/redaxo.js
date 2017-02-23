@@ -5,39 +5,20 @@ $(document).on('rex:ready', function (event, container) {
         var dialogName = ev.data.name;
         var dialogTabs = ev.data.definition;
 
-        // Plugin table ////////////////////////////////////////////////////////
-        /*
-		if (dialogName == 'table') {
-
-            // auf das Tab 'info' bezogen
-            var infoTab = dialogTabs.getContents('info');
-            // Felder entfernen        
-            infoTab.remove('txtWidth');
-            infoTab.remove('txtHeight');
-            infoTab.remove('txtBorder');
-            infoTab.remove('txtCellSpace');
-            infoTab.remove('txtCellPad');
-            infoTab.remove('cmbAlign');
-            infoTab.remove('txtSummary');
-            infoTab.remove('txtCaption');
-        }//endif
-		*/
-
         // Plugin image2 ///////////////////////////////////////////////////////
-        if (dialogName == 'image2') {
-            /*
-             * image2 später zu rexImage (neues Plugin).. und anpassungen machen
-             */
-            // auf das Tab 'info' bezogen
+        if (dialogName == 'image') {
             var infoTab = dialogTabs.getContents('info');
-            var src = infoTab.get('src');
-            src['className'] = 'rex-url';
+            var urlField = infoTab.get('txtUrl');
+            urlField['className'] = 'rex-url';
+
+			//infoTab.remove('htmlPreview');
+			infoTab.remove('medialink');
             infoTab.add({
                 type: 'button',
                 id: 'medialink',
                 label: 'Medienpool Link',
                 align: 'center',
-                style: 'display:inline-block;margin-top:14px;',
+                style: 'display:inline-block; position: absolute; right: 23px; top: 116px;',
                 onClick: function() {
                      rex_getLinkfromMediaPool();
                 }

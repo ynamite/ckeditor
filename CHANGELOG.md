@@ -1,7 +1,7 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 4.0.0 DEV
+### Version 4.0.0-dev
 
 * Portierung zu REDAXO 5
 * Update auf CKEditor 4.6.2 FULL!
