@@ -26,17 +26,28 @@ CKEditor in Modulen einsetzen
 * Desweiteren regelt man über `data-ckeditor-profile` das zu ladende Profil. 
 * Wenn nötig kann man über `data-ckeditor-height` die Höhe überschreiben (wird sonst aus dem Profil genommen).
 
-CKEditor in den Metainfos etc. einsetzen
-----------------------------------------
+CKEditor in den Metainfos einsetzen
+------------------------------------
 
 * In dem Feldattribute-Feld: `class="ckeditor" data-ckeditor-profile="default"`
 * Optional ebenfalls möglich: `data-ckeditor-height="150"`
 
 CKEditor in yForm einsetzen
-----------------------------------------
+---------------------------
+
 * Im Individuelle Attribute-Feld: `{"class":"ckeditor","data-ckeditor-profile":"default"}`
 * Weitere Attribute kommagetrennt möglich.
- 
+
+CKEditor in MForm einsetzen
+---------------------------
+
+```php
+$mform->addTextareaField(1); 
+$mform->setLabel('Text');
+$mform->addAttribute('class', 'ckeditor');
+$mform->addAttribute('data-ckeditor-profile', 'default');
+$mform->addAttribute('data-ckeditor-height', '200'); // optional
+```
 
 CKEditor Standard Profil
 ------------------------
@@ -187,7 +198,8 @@ Lizenz
 Credits
 -------
 
-* [CKEditor](http://ckeditor.com/)
-* [Xong](https://github.com/xong) für die RegEx-Hilfe
-* [webghost](https://github.com/webghostx) für die investigative Arbeit mit der CKEditor Config und und und... ;)
+* CKEditor
+* Xong für die RegEx-Hilfe
+* webghost für die investigative Arbeit mit der CKEditor Config und und und... ;)
+* phoebusryan für Code aus dem Markitup Addon
 
