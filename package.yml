@@ -12,4 +12,9 @@ page:
         profiles: { title: 'translate:profiles' }
         module: { title: 'translate:module' }
         config: { title: 'translate:config' } 
-        help: { title: 'translate:help' }
+        help:
+            title: 'translate:help'
+            subpages:
+                readme: { title: 'translate:help_readme' }
+                changelog: { title: 'translate:help_changelog' }
+                license: { title: 'translate:help_license' }

@@ -19,7 +19,7 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 
 	rex_extension::register('OUTPUT_FILTER', function($ep) {
 		$sql = rex_sql::factory();
-		$result = $sql->setQuery("SELECT `name`, `jscode` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `name` ASC")->getArray();
+		$result = $sql->setQuery("SELECT `name`, `jscode` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `id` ASC")->getArray();
 
 		$jsInitCode = "<script type=\"text/javascript\">
 		$(document).on('rex:ready', function (event, container) {

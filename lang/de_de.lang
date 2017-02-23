@@ -23,6 +23,9 @@ ckeditor_profiles_label_jscode = JavaScript Config Objekt
 
 ckeditor_module = Modul
 ckeditor_help = Hilfe
+ckeditor_help_readme = Readme
+ckeditor_help_changelog = Changelog
+ckeditor_help_license = Lizenz
 
 ckeditor_config_smart_strip = Smart Strip (entfernt leere P-Tags und multiple BR-Tags)
 
