@@ -16,8 +16,8 @@ Features
 * Vereinfachter Tabellen- und Imagedialog
 * Kurzhilfe für REDAXO Redakteure
 
-Eigene Plugins benutzen
------------------------
+Eigene CKEditor Plugins benutzen
+--------------------------------
 
 Eigene Plugins werden einfach in dass project Addon dort unter `/install/ckeditor/plugins/` gelegt. Diese werden automatisch in das CKEditor Plugin Verzeichnis kopiert bei Install, Reinstall und Update des CKEditor AddOns und stehen so immer zur Verfügung. Im Profil muss man dann noch unter `extraPlugins` das Plugin mit auflisten (durch Komma getrennt wenn mehrere). Alles weitere sollte man der Doku des Plugins entnehmen... ;) 
 
@@ -35,7 +35,7 @@ CKEditor in Modulen einsetzen
 * Wenn nötig kann man über `data-ckeditor-height` die Höhe überschreiben (wird sonst aus dem Profil genommen).
 
 CKEditor in den Metainfos einsetzen
-------------------------------------
+-----------------------------------
 
 * In dem Feldattribute-Feld: `class="ckeditor" data-ckeditor-profile="lite"`
 * Optional ebenfalls möglich: `data-ckeditor-height="150"`
