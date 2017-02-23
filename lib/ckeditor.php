@@ -30,4 +30,18 @@ class rex_ckeditor {
 		// copy extra plugins
 		rex_dir::copy(rex_path::addon('ckeditor', 'install/plugins'), rex_path::addonAssets('ckeditor', 'vendor/plugins'));
 	}
+
+	public static function replaceImageTags($html, $mediaType) {
+		return preg_replace_callback("/(<img[^>]*src *= *[\"']?)([^\"']*)/i", function($matches) use ($mediaType) {
+			$mediaFile = basename($matches[2]);
+			
+			if (method_exists('rexx','getMediaManagerFile')) {
+				$src = rexx::getMediaManagerFile($mediaFile, $mediaType);
+			} else {
+				$src = '/index.php?rex_media_type=' . $mediaType . '&rex_media_file=' . $mediaFile;
+			}
+
+			return $matches[1] . htmlspecialchars($src);
+		}, $html);
+	}
 }

@@ -5,7 +5,8 @@ CKEditor AddOn - Changelog
 
 * Portierung zu REDAXO 5
 * Update auf CKEditor 4.6.2 FULL!
-* Vereinfachter Initialisierungs-Code ohne Java Script, siehe Readme
+* Vereinfachter Initialisierungs-Code ohne JavaScript, siehe Readme
+* Neuer Readme Eintrag: Bilder als Media Manager Urls umschreiben
 * Profile
 
 ### Version 3.1.1 - 14. März 2016

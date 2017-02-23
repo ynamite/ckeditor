@@ -137,11 +137,19 @@ Ausgabe nachträglich manipulieren
 
 ```php
 <?php
-$text = <<< EOT
+$html = <<< EOT
 REX_VALUE[id=1 output=html]
 EOT;
 
-echo strtoupper($text);
+echo strtoupper($html);
+?>
+```
+
+Bilder als Media Manager Urls umschreiben 
+-----------------------------------------
+
+```php
+echo rex_ckeditor::replaceImageTags($html, 'my_media_type');
 ?>
 ```
 
