@@ -189,5 +189,5 @@ Lizenz
 Credits
 -------
 
-* CKSource, Xong, webghostx, phoebusryan, skerbis, georgkaser, fietstouring
+* CKSource, Xong, webghostx, phoebusryan, skerbis, georgkaser, fietstouring, dergel, prenzlweb, krugar, cukabeka, IngoWinter, JeGr, alexplusde
 
