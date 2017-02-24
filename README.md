@@ -137,8 +137,8 @@ echo '</div>';
 
 ```css
 .ckeditor-output img { } 
-.ckeditor-output img[float="left"] { }
-.ckeditor-output img[float="right"] { }
+.ckeditor-output img[style*="left"] { }
+.ckeditor-output img[style*="right"] { }
 ```
 
 CKEditor Toolbar Buttons
