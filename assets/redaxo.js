@@ -11,7 +11,7 @@ $(document).on('rex:ready', function (event, container) {
             var urlField = infoTab.get('txtUrl');
             urlField['className'] = 'rex-url';
 
-			//infoTab.remove('htmlPreview');
+			infoTab.remove('htmlPreview');
 			infoTab.remove('medialink');
             infoTab.add({
                 type: 'button',
