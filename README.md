@@ -121,11 +121,24 @@ echo strtoupper($html);
 Bilder als Media Manager Urls umschreiben 
 -----------------------------------------
 
+Hilfreich wenn man Bilder nicht über einen REX_MEDIABUTTON[] sondern per Image Button aus dem Medienpool holt.
+
 ```php
 <?php
-// zuerst $html holen wie unter "Ausgabe nachträglich manipulieren"
+$html = <<< EOT
+REX_VALUE[id=1 output=html]
+EOT;
+
+echo '<div class="ckeditor-output">';
 echo rex_ckeditor::replaceImageTags($html, 'my_media_type');
+echo '</div>';
 ?>
+```
+
+```css
+.ckeditor-output img { } 
+.ckeditor-output img[float="left"] { }
+.ckeditor-output img[float="right"] { }
 ```
 
 CKEditor Toolbar Buttons
