@@ -81,7 +81,7 @@ Hier ein Lite Profil mit Custom Styles:
     removeDialogTabs: 'link:advanced',
     disallowedContent: 'img{border-style,border-width,margin,margin-bottom,margin-left,margin-right,margin-top};table{width,height}[align,border,cellpadding,cellspacing,summary];caption;',
     toolbar: [
-        ['Format'],
+        ['Format', 'Styles'],
         ['Bold', 'Italic'],
         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
         ['Link', 'Unlink', 'Anchor'],
