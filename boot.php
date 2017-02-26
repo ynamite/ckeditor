@@ -23,7 +23,25 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 
 		$jsInitCode = "
 		<script type=\"text/javascript\">
-		function rex_ckeditor_init() {
+		function rex_ckeditor_init_all() {
+			var i = 0;
+
+			$('.ckeditor').each(function() {
+				i++;
+
+				// if id of textarea is missing set one, otherwise ckeditor replace will not work
+				if (!$(this).attr('id')) {
+					$(this).attr('id', 'ckeditor-' + i);
+				}
+
+				var textareaId = $(this).attr('id');
+
+				rex_ckeditor_init(textareaId);
+			});
+		}
+
+		function rex_ckeditor_init(textareaId) {
+			var jTextarea = $('#' + textareaId);
 			var profiles = {};
 		";
 
@@ -40,57 +58,59 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 		}
 
 		$jsInitCode .= "
-			var i = 0;
 			var defaultProfile = '" . $defaultProfile . "';
 
-			if (defaultProfile !== '') {
-				$('.ckeditor').each(function() {
-					i++;
+			if (defaultProfile !== '' && $('#' + textareaId).length) {
+				var ckeditorConfig;
 
-					// if id of textarea is missing set one, otherwise ckeditor replace will not work
-					if (!$(this).attr('id')) {
-						$(this).attr('id', 'ckeditor-' + i);
-					}
+				// set config object
+				if (jTextarea.attr('data-ckeditor-profile') && jTextarea.attr('data-ckeditor-profile') in profiles) {
+					ckeditorConfig = profiles[jTextarea.attr('data-ckeditor-profile')];
+				} else {
+					ckeditorConfig = profiles[defaultProfile];
+				}
+		
+				// overwrite height if necessary
+				if (jTextarea.attr('data-ckeditor-height')) {
+					ckeditorConfig.height = jTextarea.attr('data-ckeditor-height');
+				}";
 
-					var textareaId = $(this).attr('id');
-					var ckeditorConfig;
+				$rexHelpPluginFile = rex_path::addonAssets('ckeditor') . 'vendor/plugins/rex_help/plugin.js';				
 
-					// set config object
-					if ($(this).attr('data-ckeditor-profile') && $(this).attr('data-ckeditor-profile') in profiles) {
-						ckeditorConfig = profiles[$(this).attr('data-ckeditor-profile')];
-					} else {
-						ckeditorConfig = profiles[defaultProfile];
-					}
-			
-					// overwrite height if necessary
-					if ($(this).attr('data-ckeditor-height')) {
-						ckeditorConfig.height = $(this).attr('data-ckeditor-height');
-					}";
-	
-					$rexHelpPluginFile = rex_path::addonAssets('ckeditor') . 'vendor/plugins/rex_help/plugin.js';				
-
-					if (file_exists($rexHelpPluginFile)) { // if user updates assets without reinstall missing rex_help plugin will create js error
-						$jsInitCode .= "
-						ckeditorConfig.extraPlugins = ckeditorConfig.extraPlugins + ',rex_help';
-						";
-					} else {
-						$jsInitCode .= "
-						ckeditorConfig.extraPlugins = ckeditorConfig.extraPlugins.replace(/rex_help/g,'');
-						";
-					}
-
+				if (file_exists($rexHelpPluginFile)) { // if user updates assets without reinstall missing rex_help plugin will create js error
 					$jsInitCode .= "
-					CKEDITOR.replace(textareaId, ckeditorConfig);
-				});
+					ckeditorConfig.extraPlugins = ckeditorConfig.extraPlugins + ',rex_help';
+					";
+				} else {
+					$jsInitCode .= "
+					ckeditorConfig.extraPlugins = ckeditorConfig.extraPlugins.replace(/rex_help/g,'');
+					";
+				}
+
+				$jsInitCode .= "
+				CKEDITOR.replace(textareaId, ckeditorConfig);
+			}
+		}
+
+		function rex_ckeditor_destroy_all() {
+			for (name in CKEDITOR.instances) {
+				CKEDITOR.instances[name].destroy(true);
+			}
+		}
+
+		function rex_ckeditor_destroy(instanceName) {
+			for (name in CKEDITOR.instances) {
+				CKEDITOR.instances[instanceName].destroy(true);
 			}
 		}
 
 		$(document).on('rex:ready', function (event, container) {
-			rex_ckeditor_init();
+			rex_ckeditor_init_all();
 		});
 		</script>";
 
 		return str_replace('</head>', $jsInitCode . '</head>', $ep->getSubject());
 	});
 }
+
 
