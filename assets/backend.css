@@ -9,6 +9,14 @@
 	display: inline-block;
 }
 
+.rex-slice-output img[style*="left"] {
+	margin: 0 15px 10px 0;
+}
+
+.rex-slice-output img[style*="right"] {
+	margin: 0 0 10px 15px;
+}
+
 .ckeditor {
 	display: none;
 }

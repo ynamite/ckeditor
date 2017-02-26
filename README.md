@@ -79,9 +79,9 @@ Hier ein Lite Profil mit Custom Styles:
     removePlugins: 'elementspath',
     extraPlugins: 'rex_help',
     removeDialogTabs: 'link:advanced',
-    disallowedContent: 'table{width,height}[align,border,cellpadding,cellspacing,summary];caption;',
+    disallowedContent: 'img{border-style,border-width,margin,margin-bottom,margin-left,margin-right,margin-top};table{width,height}[align,border,cellpadding,cellspacing,summary];caption;',
     toolbar: [
-        ['Format', 'Styles'],
+        ['Format'],
         ['Bold', 'Italic'],
         ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
         ['Link', 'Unlink', 'Anchor'],
