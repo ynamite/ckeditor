@@ -21,8 +21,9 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 		$sql = rex_sql::factory();
 		$result = $sql->setQuery("SELECT `name`, `jscode` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `id` ASC")->getArray();
 
-		$jsInitCode = "<script type=\"text/javascript\">
-		$(document).on('rex:ready', function (event, container) {
+		$jsInitCode = "
+		<script type=\"text/javascript\">
+		function rex_ckeditor_init() {
 			var profiles = {};
 		";
 
@@ -82,6 +83,10 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 					CKEDITOR.replace(textareaId, ckeditorConfig);
 				});
 			}
+		}
+
+		$(document).on('rex:ready', function (event, container) {
+			rex_ckeditor_init();
 		});
 		</script>";
 
