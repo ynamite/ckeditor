@@ -1,7 +1,7 @@
 <?php
 $file = rex_file::get($this->getPath('LICENSE.md'));
 
-$parsedown = new Parsedown();
+$parsedown = new rex_ckeditor_parsedown();
 $content = $parsedown->text($file);
 
 $fragment = new rex_fragment();
