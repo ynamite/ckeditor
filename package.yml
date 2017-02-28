@@ -1,5 +1,5 @@
 package: ckeditor 
-version: '4.0.0-dev'
+version: '4.6.2-dev'
 author: RexDude
 supportpage: https://www.redaxo.org
 load: late

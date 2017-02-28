@@ -1,7 +1,7 @@
 CKEditor AddOn - Changelog
 ==========================
 
-### Version 4.0.0-dev
+### Version 4.6.2-dev
 
 * Portierung zu REDAXO 5
 * Update auf CKEditor 4.6.2 FULL!
@@ -9,6 +9,7 @@ CKEditor AddOn - Changelog
 * Neuer Readme Eintrag: Bilder als Media Manager Urls umschreiben
 * Extra Plugins Mechanismus eingebaut, siehe Readme
 * Editor Profile
+* Ab jetzt: AddOn Version gleich mit CKEditor Version
 
 ### Version 3.1.1 - 14. März 2016
 
