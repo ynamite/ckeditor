@@ -9,6 +9,7 @@ CKEditor AddOn - Changelog
 * Neuer Readme Eintrag: Bilder als Media Manager Urls umschreiben
 * Extra Plugins Mechanismus eingebaut, siehe Readme
 * Editor Profile
+* Smart Strip Einstellung ins Profil verschoben
 * Ab jetzt: AddOn Version gleich mit CKEditor Version
 
 ### Version 3.1.1 - 14. März 2016

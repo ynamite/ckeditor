@@ -20,14 +20,15 @@ ckeditor_profiles_formcaption_edit = Profil editieren
 ckeditor_profiles_label_name = Name
 ckeditor_profiles_label_description = Beschreibung
 ckeditor_profiles_label_jscode = JavaScript Config Objekt
+ckeditor_profiles_label_smartstrip = Smart Strip (entfernt leere P-Tags und multiple BR-Tags)
+profiles_smartstrip_active = aktiviert
+profiles_smartstrip_not_active = deaktiviert
 
 ckeditor_module = Modul
 ckeditor_help = Hilfe
 ckeditor_help_readme = Readme
 ckeditor_help_changelog = Changelog
 ckeditor_help_license = Lizenz
-
-ckeditor_config_smart_strip = Smart Strip (entfernt leere P-Tags und multiple BR-Tags)
 
 ckeditor_module_input = Eingabe
 ckeditor_module_output = Ausgabe

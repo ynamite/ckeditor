@@ -19,7 +19,7 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 
 	rex_extension::register('OUTPUT_FILTER', function($ep) {
 		$sql = rex_sql::factory();
-		$result = $sql->setQuery("SELECT `name`, `jscode` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `id` ASC")->getArray();
+		$result = $sql->setQuery("SELECT `name`, `jscode`, `smartstrip` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `id` ASC")->getArray();
 
 		$jsInitCode = "
 		<script type=\"text/javascript\">
@@ -43,31 +43,44 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 		function rex_ckeditor_init(textareaId) {
 			var jTextarea = $('#' + textareaId);
 			var profiles = {};
+			var smartStripSettings = {};
 		";
 
 		foreach ($result as $row) {
 			$jsInitCode .=	"profiles['" . $row['name'] . "'] = " . $row['jscode'] . ";
 
 			";
+
+			$jsInitCode .=	"smartStripSettings['" . $row['name'] . "'] = " . $row['smartstrip'] . ";
+
+			";
 		}
 
 		if (isset($result[0])) {
-			$defaultProfile = $result[0]['name'];
+			$defaultProfileName = $result[0]['name'];
 		} else {
-			$defaultProfile = '';
+			$defaultProfileName = '';
 		}
 
 		$jsInitCode .= "
-			var defaultProfile = '" . $defaultProfile . "';
+			var defaultProfileName = '" . $defaultProfileName . "';
 
-			if (defaultProfile !== '' && $('#' + textareaId).length) {
+			if (defaultProfileName !== '' && $('#' + textareaId).length) {
 				var ckeditorConfig;
+				var currentProfileName;
 
 				// set config object
 				if (jTextarea.attr('data-ckeditor-profile') && jTextarea.attr('data-ckeditor-profile') in profiles) {
-					ckeditorConfig = profiles[jTextarea.attr('data-ckeditor-profile')];
+					currentProfileName = jTextarea.attr('data-ckeditor-profile');
 				} else {
-					ckeditorConfig = profiles[defaultProfile];
+					currentProfileName = defaultProfileName;
+				}
+
+				ckeditorConfig = profiles[currentProfileName];
+
+				// add smart strip class
+				if (smartStripSettings[currentProfileName] === 1) {
+					jTextarea.addClass('ckeditor-smartstrip');
 				}
 		
 				// overwrite height if necessary

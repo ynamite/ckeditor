@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS `%TABLE_PREFIX%ckeditor_profiles` (
   `name` varchar(50) NOT NULL DEFAULT '',
   `description` varchar(255) NOT NULL DEFAULT '',
   `jscode` text NOT NULL,
+  `smartstrip` int(10) NOT NULL DEFAULT 1,
   PRIMARY KEY  (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 

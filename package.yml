@@ -2,7 +2,6 @@ package: ckeditor
 version: '4.6.2-dev'
 author: RexDude
 supportpage: https://www.redaxo.org
-load: late
 page:
     title: 'translate:title'
     perm: admin[]
@@ -11,10 +10,11 @@ page:
         main: { title: 'translate:main' }
         profiles: { title: 'translate:profiles' }
         module: { title: 'translate:module' }
-        config: { title: 'translate:config' } 
         help:
             title: 'translate:help'
             subpages:
                 readme: { title: 'translate:help_readme' }
                 changelog: { title: 'translate:help_changelog' }
                 license: { title: 'translate:help_license' }
+requires:
+    redaxo: '^5.0'

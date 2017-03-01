@@ -49,6 +49,12 @@
 		$field->setAttribute('class', 'codemirror');
 		$field->setAttribute('data-codemirror-mode', 'text/javascript');
 		$field->setLabel($this->i18n('profiles_label_jscode'));
+
+		$field = $form->addSelectField('smartstrip');
+		$field->getSelect()->setSize(1);
+		$field->getSelect()->addOption($this->i18n('profiles_smartstrip_active'), '1');
+		$field->getSelect()->addOption($this->i18n('profiles_smartstrip_not_active'), '0');
+		$field->setLabel($this->i18n('profiles_label_smartstrip'));
 		
 		if ($func == 'edit') {
 			$form->addParam('id', $id);
