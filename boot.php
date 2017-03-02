@@ -13,9 +13,7 @@ if (rex::isBackend() && rex::getUser() instanceof rex_user) {
 		rex_view::addJsFile($this->getAssetsUrl('redaxo.js'));
 	//}
 
-	if ($this->getConfig('smart_strip') == 1) {
-		rex_view::addJsFile($this->getAssetsUrl('smart_strip.js'));
-	}
+	rex_view::addJsFile($this->getAssetsUrl('smart_strip.js'));
 
 	rex_extension::register('OUTPUT_FILTER', function($ep) {
 		$sql = rex_sql::factory();
