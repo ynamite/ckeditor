@@ -172,7 +172,7 @@ Links
 Hinweise
 --------
 
-* Getestet mit REDAXO 5.2, 5.3
+* Getestet mit REDAXO 5.3
 * AddOn-Ordner lautet: `ckeditor`
 
 Changelog

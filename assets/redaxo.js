@@ -1,11 +1,151 @@
-$(document).on('rex:ready', function (event, container) {
-    CKEDITOR.on('dialogDefinition', function(ev) {
+function rex_ckeditor_init(textareaId) {
+	// this function assumes this global js vars from profile file: ckDefaultProfileName, ckProfiles, ckSmartStripSettings, ckRexHelpPluginAvailable
+	var jTextarea = $('#' + textareaId);
 
-        // Dialog name und Devinition/Tabs
+	if (ckDefaultProfileName !== '' && $('#' + textareaId).length) {
+		var currentEditorConfig;
+		var currentProfileName;
+
+		// set config object
+		if (jTextarea.attr('data-ckeditor-profile') && jTextarea.attr('data-ckeditor-profile') in ckProfiles) {
+			currentProfileName = jTextarea.attr('data-ckeditor-profile');
+		} else {
+			currentProfileName = ckDefaultProfileName;
+		}
+
+		currentEditorConfig = ckProfiles[currentProfileName];
+
+		// add smart strip class
+		if (ckSmartStripSettings[currentProfileName] === 1) {
+			jTextarea.addClass('ckeditor-smartstrip');
+		}
+
+		// overwrite height if necessary
+		if (jTextarea.attr('data-ckeditor-height')) {
+			currentEditorConfig.height = jTextarea.attr('data-ckeditor-height');
+		}
+
+		// make sure rex_help is available otherwise js error		
+		if (ckRexHelpPluginAvailable) {
+			currentEditorConfig.extraPlugins = currentEditorConfig.extraPlugins + ',rex_help';
+		} else {
+			currentEditorConfig.extraPlugins = currentEditorConfig.extraPlugins.replace(/rex_help/g,'');
+		}
+
+		// finally replace textareas
+		CKEDITOR.replace(textareaId, currentEditorConfig);
+	}
+}
+
+function rex_ckeditor_init_all() {
+	var i = 0;
+
+	$('.ckeditor').each(function() {
+		i++;
+
+		// if id of textarea is missing set one, otherwise ckeditor replace will not work
+		if (!$(this).attr('id')) {
+			$(this).attr('id', 'ckeditor-' + i);
+		}
+
+		var textareaId = $(this).attr('id');
+
+		rex_ckeditor_init(textareaId);
+	});
+}
+
+function rex_ckeditor_destroy(instanceName) {
+	for (name in CKEDITOR.instances) {
+		CKEDITOR.instances[instanceName].destroy(true);
+	}
+}
+
+function rex_ckeditor_destroy_all() {
+	for (name in CKEDITOR.instances) {
+		CKEDITOR.instances[name].destroy(true);
+	}
+}
+
+function rex_ckeditor_get_link_from_linkmap() {
+	var linkMap = openLinkMap();
+
+	$(linkMap).on('rex:selectLink', function (event, linkurl, linktext) {
+		event.preventDefault();
+		linkMap.close();
+
+		jQuery('.rex-url input').val(linkurl);
+		jQuery('.rex-protocol option:last').prop('selected', true);
+	});
+}
+
+function rex_ckeditor_get_link_from_mediapool() {
+	var mediapool = openMediaPool('ckeditor_medialink');
+
+	$(mediapool).on('rex:selectMedia', function (event, filename) {
+		event.preventDefault();
+		mediapool.close();
+	
+		jQuery('.rex-url input').val("/media/" + filename);
+		jQuery('.rex-protocol option:last').prop('selected', true); // only for link dialog
+	});
+}
+
+$(document).on('rex:ready', function (event, container) {
+	// initialize ckeditor
+	rex_ckeditor_init_all();
+
+	// smart strip
+	$('form').submit(function() {
+		if ($('.ckeditor-smartstrip').length) {
+			for (var i in CKEDITOR.instances) {
+				var data = CKEDITOR.instances[i].getData();
+				var doDataUpdate = false;
+
+				// replace &nbsp;
+				if (data.indexOf("&nbsp;") != -1) {
+					data = data.replace(/&nbsp;/g, "  ");
+					doDataUpdate = true;
+				}
+
+				// replace multiple <br>s with a single one
+				if (data.indexOf("<br />\n<br />") != -1 || data.indexOf("<br />\r\n<br />") != -1 || data.indexOf("<br /><br />") != -1) {
+					data = data.replace(/(<br\s*\/?>\s*)+/igm, "<br />\n");
+					doDataUpdate = true;
+				}
+
+				// replace leading <br>s
+				if (data.match(/(<(?!br)(\w)[^>]*>)(\s*<br\s*\/?>\s*)+/igm)) {
+					data = data.replace(/(<(?!br)(\w)[^>]*>)(\s*<br\s*\/?>\s*)+/igm, '$1');
+					doDataUpdate = true;
+				}
+
+				// replace trailing <br>s
+				if (data.match(/(\s*<br\s*\/?>\s*)+(<\/(?!br)(\w)>)/igm)) {
+					data = data.replace(/(\s*<br\s*\/?>\s*)+(<\/(?!br)(\w)>)/igm, '$2');
+					doDataUpdate = true;
+				}
+
+				// replace empty paragraphs
+				if (data.match(/(<p>(\s|&nbsp;|<br\s*\/?>)*<\/p>)/igm)) {
+					data = data.replace(/(<p>(\s|&nbsp;|<br\s*\/?>)*<\/p>)/igm, '');
+					doDataUpdate = true;
+				}
+
+				if (doDataUpdate) {
+					CKEDITOR.instances[i].setData(data);
+				}
+			}
+
+			return true;
+		}
+	});
+
+	// dialog changes
+    CKEDITOR.on('dialogDefinition', function(ev) {
         var dialogName = ev.data.name;
         var dialogTabs = ev.data.definition;
 
-        // Plugin image2 ///////////////////////////////////////////////////////
+        // Plugin image ///////////////////////////////////////////////////////
         if (dialogName == 'image') {
             var infoTab = dialogTabs.getContents('info');
             var urlField = infoTab.get('txtUrl');
@@ -20,7 +160,7 @@ $(document).on('rex:ready', function (event, container) {
                 align: 'center',
                 style: 'display:inline-block; position: absolute; right: 23px; top: 116px;',
                 onClick: function() {
-                     rex_getLinkfromMediaPool();
+                     rex_ckeditor_get_link_from_mediapool();
                 }
             });
         }//endif
@@ -171,7 +311,7 @@ $(document).on('rex:ready', function (event, container) {
                         label: 'Interner Link',
                         style: 'float : right;',
                         onClick: function() {
-                           rex_getLinkfromLinkMap();
+                           rex_ckeditor_get_link_from_linkmap();
 
                         }
                     },
@@ -181,7 +321,7 @@ $(document).on('rex:ready', function (event, container) {
                         label: 'Medienpool Link',
                         style: 'float : right;',
                         onClick: function() {
-                             rex_getLinkfromMediaPool();
+                             rex_ckeditor_get_link_from_mediapool();
                         }
                     }
                 ]
@@ -197,43 +337,3 @@ $(document).on('rex:ready', function (event, container) {
     }); // end dialogDefinition
 }); // end document ready
 
-function rex_getLinkfromLinkMap() {
-	var linkMap = openLinkMap();
-
-	$(linkMap).on('rex:selectLink', function (event, linkurl, linktext) {
-		event.preventDefault();
-		linkMap.close();
-
-		jQuery('.rex-url input').val(linkurl);
-		jQuery('.rex-protocol option:last').prop('selected', true);
-	});
-}
-
-function rex_getLinkfromMediaPool() {
-	var mediapool = openMediaPool('ckeditor_medialink');
-
-	$(mediapool).on('rex:selectMedia', function (event, filename) {
-		event.preventDefault();
-		mediapool.close();
-	
-		jQuery('.rex-url input').val("/media/" + filename);
-		jQuery('.rex-protocol option:last').prop('selected', true); // only for link dialog
-	});
-}
-
-function getParam(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split("=");
-
-        if (pair[0] == variable) {
-            return pair[1];
-        }
-    }
-
-    return(false);
-}
-
-   

@@ -39,6 +39,58 @@ class rex_ckeditor {
 		if (file_exists($extraPluginsPath)) {
 			rex_dir::copy($extraPluginsPath, rex_path::addonAssets('ckeditor', 'vendor/plugins'));
 		}
+
+		// write profile file
+		rex_ckeditor::writeProfileJSFile();
+	}
+
+	public static function writeProfileJSFile() {
+		$profileFile = self::getProfileJSFile();
+
+		$sql = rex_sql::factory();
+		$result = $sql->setQuery("SELECT `name`, `jscode`, `smartstrip` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `id` ASC")->getArray();
+
+		$jsCode = "
+			/* THIS FILE IS CREATE DYNAMICALLY BY rex_ckeditor::writeProfileJSFile() PHP METHOD. DON'T TOUCH! */
+
+			var ckDefaultProfileName = '';
+			var ckProfiles = {};
+			var ckSmartStripSettings = {};
+			var ckRexHelpPluginAvailable = true;" . PHP_EOL . PHP_EOL;
+
+		foreach ($result as $row) {
+			$jsCode .= "ckProfiles['" . $row['name'] . "'] = " . $row['jscode'] . ";" . PHP_EOL . PHP_EOL;
+			$jsCode .= "ckSmartStripSettings['" . $row['name'] . "'] = " . $row['smartstrip'] . ";". PHP_EOL . PHP_EOL;
+		}
+
+		if (isset($result[0])) {
+			$ckDefaultProfileName = $result[0]['name'];
+		} else {
+			$ckDefaultProfileName = '';
+		}
+
+		$jsCode .= "ckDefaultProfileName = '" . $ckDefaultProfileName . "';". PHP_EOL . PHP_EOL;
+
+		$rexHelpPluginFile = rex_path::addonAssets('ckeditor') . 'vendor/plugins/rex_help/plugin.js';
+
+		if (!file_exists($rexHelpPluginFile)) {
+			// try to copy extra plugins again
+			rex_dir::copy(rex_path::addon('ckeditor', 'install/plugins'), rex_path::addonAssets('ckeditor', 'vendor/plugins'));
+		}
+
+		if (file_exists($rexHelpPluginFile)) { // if user updates assets without reinstall missing rex_help plugin will create js error
+			$jsCode .= "ckRexHelpPluginAvailable = true;". PHP_EOL . PHP_EOL;
+		} else {
+			$jsCode .= "ckRexHelpPluginAvailable = false;". PHP_EOL . PHP_EOL;
+		}
+
+		if (file_put_contents($profileFile, $jsCode) === false) {
+			throw new Exception('File "' . $profileFile . '" could not be written! Check if server permissions are set correctly.');
+		}
+	}
+
+	public static function getProfileJSFile() {
+		return rex_url::addonAssets('ckeditor', 'profiles.dyn.js');
 	}
 
 	public static function replaceImageTags($html, $mediaType) {
