@@ -1,5 +1,7 @@
 <?php
 class rex_ckeditor {
+	const CKEDITOR_PROFILE_FILE = 'profiles.dyn.js';
+
 	public static function applyPatches() {
 		// anti flicker patch
 		$contentsCSSFile = file_get_contents(rex_path::addonAssets('ckeditor', 'vendor/contents.css'));
@@ -45,7 +47,7 @@ class rex_ckeditor {
 	}
 
 	public static function writeProfileJSFile() {
-		$profileFile = self::getProfileJSFile();
+		$profileFile = self::getAbsoluteProfileJSFile();
 
 		$sql = rex_sql::factory();
 		$result = $sql->setQuery("SELECT `name`, `jscode`, `smartstrip` FROM `" . rex::getTablePrefix() . "ckeditor_profiles` ORDER BY `id` ASC")->getArray();
@@ -89,8 +91,12 @@ class rex_ckeditor {
 		}
 	}
 
-	public static function getProfileJSFile() {
-		return rex_url::addonAssets('ckeditor', 'profiles.dyn.js');
+	public static function getRelativeProfileJSFile() {
+		return rex_url::addonAssets('ckeditor', self::CKEDITOR_PROFILE_FILE);
+	}
+
+	public static function getAbsoluteProfileJSFile() {
+		return rex_path::addonAssets('ckeditor', self::CKEDITOR_PROFILE_FILE);		
 	}
 
 	public static function replaceImageTags($html, $mediaType) {
