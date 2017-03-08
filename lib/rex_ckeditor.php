@@ -103,8 +103,8 @@ class rex_ckeditor {
 		return preg_replace_callback("/(<img[^>]*src *= *[\"']?)([^\"']*)/i", function($matches) use ($mediaType) {
 			$mediaFile = basename($matches[2]);
 			
-			if (method_exists('rexx','getMediaManagerFile')) {
-				$src = rexx::getMediaManagerFile($mediaFile, $mediaType);
+			if (method_exists('rexx','getManagedMediaFile')) {
+				$src = rexx::getManagedMediaFile($mediaFile, $mediaType);
 			} else {
 				$src = '/index.php?rex_media_type=' . $mediaType . '&amp;rex_media_file=' . $mediaFile;
 			}
