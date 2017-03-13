@@ -57,6 +57,7 @@ if ($func == '') {
 
 	$field = $form->addTextAreaField('jscode');
 	$field->setAttribute('class', 'codemirror');
+	$field->setAttribute('id', 'ckeditor-jscode');
 	$field->setAttribute('data-codemirror-mode', 'text/javascript');
 	$field->setLabel($this->i18n('profiles_label_jscode'));
 
