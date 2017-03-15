@@ -93,7 +93,10 @@ function rex_ckeditor_get_link_from_mediapool() {
 $(document).on('rex:ready', function (event, container) {
 	// initialize ckeditor
 	rex_ckeditor_init_all();
-
+	if (typeof mblock_module === 'object') {
+		mblock_module.registerCallback('add_item_start', rex_ckeditor_destroy_all);
+		mblock_module.registerCallback('reindex_end', rex_ckeditor_init_all);
+	}
 	// smart strip
 	$('form').submit(function() {
 		if ($('.ckeditor-smartstrip').length) {
